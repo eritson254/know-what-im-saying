@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 export type RelatedReadingItem = {
   label: string;
   title: string;
+  description: string;
   href: string;
   readingTime: number;
 };
@@ -33,9 +34,12 @@ export function RelatedReadingBand({
               <span className="font-mono text-[11px] tracking-[.12em] text-accent-text uppercase">
                 {item.label}
               </span>
-              <h3 className="flex-1 font-serif text-[21px] leading-[1.2] font-medium text-ink md:text-[23px]">
+              <h3 className="font-serif text-[21px] leading-[1.2] font-medium text-ink md:text-[23px]">
                 {item.title}
               </h3>
+              <p className="flex-1 text-[14px] leading-[1.55] text-muted-2">
+                {item.description}
+              </p>
               <div className="flex items-center justify-between border-t border-border-soft pt-4">
                 <span className="font-mono text-[11px] text-muted-3">
                   {item.readingTime} min read

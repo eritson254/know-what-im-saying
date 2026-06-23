@@ -16,7 +16,7 @@ import { StoryPrompt } from "@/components/articles/story-prompt";
 import { getAllEssays, getEssayBySlug, getRelatedEssays } from "@/lib/content/essays";
 import { getSeriesInstallments } from "@/lib/content/series";
 import { getTopicBySlug } from "@/lib/content/topics";
-import { buildPageMetadata } from "@/lib/seo/metadata";
+import { buildCanonicalUrl, buildPageMetadata } from "@/lib/seo/metadata";
 
 export function generateStaticParams() {
   return getAllEssays().map((essay) => ({ slug: essay.slug }));
@@ -80,12 +80,14 @@ export default async function EssayPage({
         .map((item) => ({
           label: `Essay ${String(item.frontmatter.series!.installment).padStart(2, "0")}`,
           title: item.frontmatter.title,
+          description: item.frontmatter.description,
           href: `/essays/${item.slug}`,
           readingTime: item.readingTime,
         }))
     : getRelatedEssays(essay).map((item) => ({
         label: getTopicBySlug(item.frontmatter.topic)?.label ?? item.frontmatter.topic,
         title: item.frontmatter.title,
+        description: item.frontmatter.description,
         href: `/essays/${item.slug}`,
         readingTime: item.readingTime,
       }));
@@ -95,7 +97,11 @@ export default async function EssayPage({
       <Header />
       <ReadingProgressBar />
 
-      <ArticleHeader frontmatter={essay.frontmatter} readingTime={essay.readingTime} />
+      <ArticleHeader
+        frontmatter={essay.frontmatter}
+        readingTime={essay.readingTime}
+        url={buildCanonicalUrl(`/essays/${essay.slug}`, essay.frontmatter.canonicalUrl)}
+      />
       <ReadingPreferences />
 
       {series && <SeriesProgressTracker seriesSlug={series.slug} essaySlug={essay.slug} />}

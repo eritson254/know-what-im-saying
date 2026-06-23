@@ -1,20 +1,20 @@
-import { ExternalLink } from "lucide-react";
 import { MediumIcon } from "@/components/reading-list/medium-icon";
 import type { ReadingListFrontmatter } from "@/lib/content/schema";
 
 export function ReadingListRow({
   item,
+  onSelect,
 }: {
   item: { slug: string; frontmatter: ReadingListFrontmatter };
+  onSelect: () => void;
 }) {
-  const { title, creator, blurb, externalUrl } = item.frontmatter;
+  const { title, creator, blurb } = item.frontmatter;
 
   return (
-    <a
-      href={externalUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="grid grid-cols-[40px_1fr_auto] items-start gap-5 border-t border-border py-[26px] no-underline hover:opacity-[.78]"
+    <button
+      type="button"
+      onClick={onSelect}
+      className="grid w-full grid-cols-[40px_1fr] items-start gap-5 border-t border-border py-[26px] text-left hover:opacity-[.78]"
     >
       <MediumIcon
         medium={item.frontmatter.medium}
@@ -32,7 +32,6 @@ export function ReadingListRow({
         )}
         <p className="max-w-[58ch] text-[15px] leading-[1.55] text-muted-2">{blurb}</p>
       </div>
-      <ExternalLink className="mt-[4px] h-4 w-4 text-muted-4" strokeWidth={1.5} />
-    </a>
+    </button>
   );
 }

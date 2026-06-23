@@ -4,7 +4,7 @@ import { MessageCircle, Mail } from "lucide-react";
 export function CommunityNewsletter() {
   return (
     <section className="grid gap-8 px-6 pb-16 md:grid-cols-2 md:gap-8 md:px-14 md:pb-[88px]">
-      <div className="flex flex-col rounded-[3px] bg-accent p-9 text-accent-foreground md:p-[50px]">
+      <div className="flex min-w-0 flex-col rounded-[3px] bg-accent p-9 text-accent-foreground md:p-[50px]">
         <div className="mb-[22px] flex h-[46px] w-[46px] items-center justify-center rounded-full bg-white/12">
           <MessageCircle size={22} strokeWidth={1.6} className="text-accent-foreground" />
         </div>
@@ -25,7 +25,7 @@ export function CommunityNewsletter() {
           Join the channel
         </Link>
       </div>
-      <div className="flex flex-col rounded-[3px] border border-border-strong bg-surface p-9 md:p-[50px]">
+      <div className="flex min-w-0 flex-col rounded-[3px] border border-border-strong bg-surface p-9 md:p-[50px]">
         <div className="mb-[22px] flex h-[46px] w-[46px] items-center justify-center rounded-full bg-pill">
           <Mail size={22} strokeWidth={1.6} className="text-accent-text" />
         </div>
@@ -38,11 +38,11 @@ export function CommunityNewsletter() {
         <p className="mb-[26px] max-w-[34ch] text-[16px] leading-[1.6] text-muted-2">
           New essays, notes, and ideas worth sitting with.
         </p>
-        <form className="mt-auto flex gap-[10px]">
+        <form className="mt-auto flex flex-col gap-[10px] sm:flex-row">
           <input
             type="email"
             placeholder="you@email.com"
-            className="flex-1 rounded-[2px] border border-border-card bg-white px-[14px] py-3 font-sans text-[15px] text-ink outline-none"
+            className="min-w-0 flex-1 rounded-[2px] border border-border-card bg-white px-[14px] py-3 font-sans text-[15px] text-ink outline-none"
           />
           <button
             type="submit"

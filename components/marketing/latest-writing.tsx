@@ -23,7 +23,7 @@ export function LatestWriting({
         <div>
           <div className="mb-6 flex items-baseline justify-between">
             <h2 className="font-serif text-[34px] font-medium text-ink-strong">
-              Latest writing
+              Latest pieces
             </h2>
             <Link
               href="/essays"

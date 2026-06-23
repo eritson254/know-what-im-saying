@@ -27,7 +27,7 @@ export function CoverStory({
           <p className="mb-[22px] max-w-[32ch] font-serif text-[20px] leading-[1.35] text-muted-5 italic md:text-[25px]">
             {essay.frontmatter.description}
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-6">
             <Link
               href={`/essays/${essay.slug}`}
               className="rounded-[2px] bg-accent px-[26px] py-[14px] text-[16px] font-semibold text-accent-foreground no-underline hover:bg-accent-hover"

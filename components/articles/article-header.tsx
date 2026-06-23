@@ -1,4 +1,5 @@
 import { Pill } from "@/components/ui/pill";
+import { ShareButton } from "@/components/articles/share-button";
 import { getTopicBySlug } from "@/lib/content/topics";
 import { formatDisplayDate } from "@/lib/utils/format-date";
 import type { EssayFrontmatter } from "@/lib/content/schema";
@@ -6,9 +7,11 @@ import type { EssayFrontmatter } from "@/lib/content/schema";
 export function ArticleHeader({
   frontmatter,
   readingTime,
+  url,
 }: {
   frontmatter: EssayFrontmatter;
   readingTime: number;
+  url: string;
 }) {
   const topic = getTopicBySlug(frontmatter.topic);
   const series = frontmatter.series;
@@ -34,7 +37,11 @@ export function ArticleHeader({
         <span className="text-border-card">·</span>
         <span>{readingTime} min read</span>
         <span className="text-border-card">·</span>
-        <span className="text-accent-text">Share</span>
+        <ShareButton
+          title={frontmatter.title}
+          text={frontmatter.description}
+          url={url}
+        />
       </div>
     </article>
   );
