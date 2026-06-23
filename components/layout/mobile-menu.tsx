@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Feather } from "lucide-react";
-import { primaryNav } from "@/config/navigation";
+import { mobileNav } from "@/config/navigation";
 
 export function MobileMenu({
   isOpen,
@@ -39,7 +39,7 @@ export function MobileMenu({
       </div>
 
       <nav className="flex flex-col px-6 py-8">
-        {primaryNav.map((link) => (
+        {mobileNav.map((link) => (
           <Link
             key={link.href}
             href={link.href}

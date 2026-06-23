@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Feather, Search } from "lucide-react";
+import { ChevronDown, ChevronUp, Feather, Search } from "lucide-react";
 import { primaryNav } from "@/config/navigation";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
@@ -22,20 +22,32 @@ function HamburgerButton({ onClick }: { onClick: () => void }) {
   );
 }
 
-function MobileBar({ onMenuOpen }: { onMenuOpen: () => void }) {
+function MobileBar({
+  onMenuOpen,
+  collapsed,
+}: {
+  onMenuOpen: () => void;
+  collapsed: boolean;
+}) {
   return (
-    <header className="flex items-center justify-between border-b border-border px-[22px] py-[18px] md:hidden">
-      <Link href="/" className="flex items-center gap-[9px] no-underline">
-        <Feather size={16} strokeWidth={1.6} className="text-accent-text" />
-        <span className="font-serif text-[18px] text-ink">
-          Know What I&rsquo;m Saying?
-        </span>
-      </Link>
-      <div className="flex items-center gap-3">
-        <ThemeToggle />
-        <HamburgerButton onClick={onMenuOpen} />
-      </div>
-    </header>
+    <div
+      className={`overflow-hidden bg-paper transition-[max-height] duration-200 md:hidden ${
+        collapsed ? "max-h-0" : "max-h-20"
+      }`}
+    >
+      <header className="flex items-center justify-between border-b border-border px-[22px] py-[18px]">
+        <Link href="/" className="flex items-center gap-[9px] no-underline">
+          <Feather size={16} strokeWidth={1.6} className="text-accent-text" />
+          <span className="font-serif text-[18px] text-ink">
+            Know What I&rsquo;m Saying?
+          </span>
+        </Link>
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <HamburgerButton onClick={onMenuOpen} />
+        </div>
+      </header>
+    </div>
   );
 }
 
@@ -144,10 +156,41 @@ export function Header({
   variant?: "standard" | "masthead";
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
+  const stickyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = stickyRef.current;
+    if (!el) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      document.documentElement.style.setProperty(
+        "--mobile-header-h",
+        `${entry.contentRect.height}px`,
+      );
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
-      <MobileBar onMenuOpen={() => setIsMenuOpen(true)} />
+      <div ref={stickyRef} className="sticky top-0 z-40 md:hidden">
+        <MobileBar onMenuOpen={() => setIsMenuOpen(true)} collapsed={collapsed} />
+        <button
+          type="button"
+          onClick={() => setCollapsed((value) => !value)}
+          aria-label={collapsed ? "Expand navigation" : "Collapse navigation"}
+          aria-expanded={!collapsed}
+          className="absolute top-full left-1/2 flex h-6 w-12 -translate-x-1/2 items-center justify-center rounded-b-full border border-t-0 border-border bg-paper text-muted-3"
+        >
+          {collapsed ? (
+            <ChevronDown size={16} strokeWidth={1.8} />
+          ) : (
+            <ChevronUp size={16} strokeWidth={1.8} />
+          )}
+        </button>
+      </div>
       {variant === "masthead" ? <MastheadHeader /> : <StandardHeader />}
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>

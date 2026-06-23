@@ -6,25 +6,25 @@ import { Share2, Check } from "lucide-react";
 export function ShareButton({
   title,
   text,
-  url,
 }: {
   title: string;
   text: string;
-  url: string;
 }) {
   const [copied, setCopied] = useState(false);
 
   async function handleShare() {
+    const shareUrl = window.location.href;
+
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
-        await navigator.share({ title, text, url });
+        await navigator.share({ title, text, url: shareUrl });
       } catch {
         // user cancelled the share sheet — no error needed
       }
       return;
     }
 
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(shareUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }

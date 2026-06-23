@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Inter, Space_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
+import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
 import { ThemeScript } from "@/components/theme/theme-script";
 import "./globals.css";
 
@@ -38,10 +39,11 @@ export default function RootLayout({
       lang="en"
       className={`${newsreader.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans pb-[calc(54px+env(safe-area-inset-bottom))] md:pb-0">
         <ThemeScript />
         {children}
         <Footer />
+        <MobileTabBar />
       </body>
     </html>
   );

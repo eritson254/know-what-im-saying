@@ -5,6 +5,7 @@ import { ReadingProgressBar } from "@/components/articles/reading-progress-bar";
 import { ArticleHeader } from "@/components/articles/article-header";
 import { ReadingPreferences } from "@/components/articles/reading-preferences";
 import { SeriesNavBar } from "@/components/articles/series-nav-bar";
+import { SeriesSwipeNav } from "@/components/articles/series-swipe-nav";
 import { SeriesProgressTracker } from "@/components/articles/series-progress-tracker";
 import { MdxContent } from "@/components/articles/mdx-content";
 import { AuthorNote } from "@/components/articles/author-note";
@@ -16,7 +17,7 @@ import { StoryPrompt } from "@/components/articles/story-prompt";
 import { getAllEssays, getEssayBySlug, getRelatedEssays } from "@/lib/content/essays";
 import { getSeriesInstallments } from "@/lib/content/series";
 import { getTopicBySlug } from "@/lib/content/topics";
-import { buildCanonicalUrl, buildPageMetadata } from "@/lib/seo/metadata";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 
 export function generateStaticParams() {
   return getAllEssays().map((essay) => ({ slug: essay.slug }));
@@ -97,14 +98,17 @@ export default async function EssayPage({
       <Header />
       <ReadingProgressBar />
 
-      <ArticleHeader
-        frontmatter={essay.frontmatter}
-        readingTime={essay.readingTime}
-        url={buildCanonicalUrl(`/essays/${essay.slug}`, essay.frontmatter.canonicalUrl)}
-      />
+      <ArticleHeader frontmatter={essay.frontmatter} readingTime={essay.readingTime} />
       <ReadingPreferences />
 
       {series && <SeriesProgressTracker seriesSlug={series.slug} essaySlug={essay.slug} />}
+
+      {series && (
+        <SeriesSwipeNav
+          previousSlug={previous?.slug ?? null}
+          nextSlug={next?.slug ?? null}
+        />
+      )}
 
       {series && (
         <SeriesNavBar

@@ -18,7 +18,10 @@ export function ReadingProgressBar() {
   }, []);
 
   return (
-    <div className="h-[3px] bg-border">
+    <div
+      className="sticky z-30 h-[3px] bg-border"
+      style={{ top: "var(--mobile-header-h, 0px)" }}
+    >
       <div
         className="h-[3px] bg-accent transition-[width] duration-150"
         style={{ width: `${progress}%` }}

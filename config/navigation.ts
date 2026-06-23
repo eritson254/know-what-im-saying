@@ -12,6 +12,16 @@ export const primaryNav: NavLink[] = [
   { label: "About", href: "/about" },
 ];
 
+export const mobileNav: NavLink[] = [
+  { label: "Essays", href: "/essays" },
+  { label: "Series", href: "/series" },
+  { label: "Topics", href: "/topics" },
+  { label: "Reading List", href: "/reading-list" },
+  { label: "Notes", href: "/notes" },
+  { label: "Start Here", href: "/start-here" },
+  { label: "About", href: "/about" },
+];
+
 export const footerReadLinks: NavLink[] = [
   { label: "Essays", href: "/essays" },
   { label: "Series", href: "/series" },
