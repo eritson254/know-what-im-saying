@@ -71,3 +71,12 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
 }
+
+.article-prose > p:first-of-type::first-letter {
+  float: left;
+  margin: 8px 14px 0 0;
+  font-family: var(--font-newsreader), serif;
+  font-size: 62px;
+  line-height: 0.8;
+  color: var(--color-ink-strong);
+}
