@@ -12,7 +12,7 @@ export function InlineCta({
   href?: string;
 }) {
   return (
-    <div className="my-11 flex flex-col items-start gap-5 rounded-[3px] bg-[#EEEBE0] px-7 py-[30px] sm:flex-row sm:items-center sm:justify-between">
+    <div className="my-11 flex flex-col items-start gap-5 rounded-[4px] border border-border-soft bg-surface px-7 py-[30px] sm:flex-row sm:items-center sm:justify-between">
       <div>
         <div className="mb-1 font-serif text-[22px] text-ink">{heading}</div>
         <div className="text-[15px] text-muted-2">{description}</div>

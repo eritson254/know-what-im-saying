@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { SeriesHero } from "@/components/series/series-hero";
 import { ReadingOrder } from "@/components/series/reading-order";
+import { SeriesReadProgressSummary } from "@/components/series/series-read-progress-summary";
 import { SeriesThemeBand } from "@/components/series/series-theme-band";
 import { RelatedSeriesGrid } from "@/components/series/related-series-grid";
 import { ReaderStoryCta } from "@/components/marketing/reader-story-cta";
@@ -43,7 +44,10 @@ export default async function SeriesPage({
   if (!series) notFound();
 
   const installments = getSeriesInstallments(series.slug);
-  const firstInstallmentSlug = installments[0]?.slug ?? null;
+  const publishedInstallments = installments.map((item) => ({
+    slug: item.slug,
+    installment: item.frontmatter.series!.installment,
+  }));
 
   const readingOrderEntries = Array.from(
     { length: series.frontmatter.totalPlanned },
@@ -57,6 +61,7 @@ export default async function SeriesPage({
         installment: installmentNumber,
         title: published.frontmatter.title,
         href: `/essays/${published.slug}`,
+        slug: published.slug,
       };
     }
     const planned = series.frontmatter.plannedInstallments.find(
@@ -66,6 +71,7 @@ export default async function SeriesPage({
       installment: installmentNumber,
       title: planned?.title ?? `Essay ${installmentNumber}`,
       href: null,
+      slug: null,
     };
   });
 
@@ -84,9 +90,13 @@ export default async function SeriesPage({
       <SeriesHero
         series={series}
         publishedCount={installments.length}
-        firstInstallmentSlug={firstInstallmentSlug}
+        publishedInstallments={publishedInstallments}
       />
-      <ReadingOrder entries={readingOrderEntries} />
+      <SeriesReadProgressSummary
+        seriesSlug={series.slug}
+        totalPublished={installments.length}
+      />
+      <ReadingOrder seriesSlug={series.slug} entries={readingOrderEntries} />
       <SeriesThemeBand theme={series.frontmatter.theme} />
       <RelatedSeriesGrid items={relatedSeries} />
       <ReaderStoryCta />

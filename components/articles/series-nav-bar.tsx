@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Installment = {
   slug: string;
@@ -20,42 +21,66 @@ export function SeriesNavBar({
   next: Installment | null;
   firstInstallment: Installment | null;
 }) {
+  const dots = Array.from({ length: totalPlanned }, (_, i) => i + 1);
+
   return (
-    <div className="mx-auto mt-6 max-w-[720px] px-6">
-      <div className="flex flex-col gap-3 rounded-[3px] bg-band px-[22px] py-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-col gap-[3px]">
-          <span className="font-mono text-[11px] tracking-[.1em] text-[#6a7060] uppercase">
+    <div className="mx-auto mt-8 max-w-[720px] px-6">
+      <div className="flex flex-col gap-5 border-y border-border py-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <span className="font-mono text-[11px] tracking-[.1em] text-muted-2 uppercase">
             Series · {seriesTitle}
           </span>
-          <span className="text-[14px] font-semibold text-[#3b3c34]">
+          <span className="font-mono text-[11px] tracking-[.1em] text-muted-3 uppercase">
             Essay {currentInstallment} of {totalPlanned}
           </span>
         </div>
-        <div className="flex flex-wrap items-center gap-[18px] text-[13px] font-semibold">
-          {firstInstallment && (
+
+        <div className="flex items-center">
+          {dots.map((n) => (
+            <span key={n} className={`flex items-center ${n !== totalPlanned ? "flex-1" : ""}`}>
+              <span
+                className={`block h-[7px] w-[7px] shrink-0 rounded-full ${
+                  n <= currentInstallment ? "bg-accent-text" : "bg-border-strong"
+                }`}
+              />
+              {n !== totalPlanned && <span className="mx-[6px] h-px flex-1 bg-border-strong" />}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3 text-[13px] font-semibold">
+          {firstInstallment ? (
             <Link
               href={`/essays/${firstInstallment.slug}`}
-              className="text-[#5f6253] no-underline hover:text-accent"
+              className="text-muted-1 no-underline hover:text-accent-text"
             >
-              Start from Essay One
+              ← Start from Essay One
             </Link>
+          ) : (
+            <span />
           )}
-          {previous && (
-            <Link
-              href={`/essays/${previous.slug}`}
-              className="rounded-[2px] border border-[#b9c2ad] px-3 py-[6px] text-accent no-underline hover:bg-white"
-            >
-              ← Prev
-            </Link>
-          )}
-          {next && (
-            <Link
-              href={`/essays/${next.slug}`}
-              className="rounded-[2px] border border-[#b9c2ad] px-3 py-[6px] text-accent no-underline hover:bg-white"
-            >
-              Next →
-            </Link>
-          )}
+          <div className="flex items-center gap-2">
+            {previous && (
+              <Link
+                href={`/essays/${previous.slug}`}
+                aria-label="Previous essay"
+                className="flex items-center gap-1 rounded-full border border-border-strong px-3 py-[6px] text-accent-text no-underline transition-colors hover:bg-surface"
+              >
+                <ChevronLeft size={14} strokeWidth={2} />
+                Prev
+              </Link>
+            )}
+            {next && (
+              <Link
+                href={`/essays/${next.slug}`}
+                aria-label="Next essay"
+                className="flex items-center gap-1 rounded-full border border-border-strong px-3 py-[6px] text-accent-text no-underline transition-colors hover:bg-surface"
+              >
+                Next
+                <ChevronRight size={14} strokeWidth={2} />
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

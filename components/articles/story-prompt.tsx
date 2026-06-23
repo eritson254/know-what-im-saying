@@ -11,7 +11,7 @@ export function StoryPrompt() {
       </p>
       <Link
         href="/share-your-story"
-        className="inline-block rounded-[2px] border-[1.5px] border-accent px-7 py-[13px] text-[16px] font-semibold text-accent no-underline hover:bg-accent hover:text-accent-foreground"
+        className="inline-block rounded-[2px] border-[1.5px] border-accent-text px-7 py-[13px] text-[16px] font-semibold text-accent-text no-underline hover:bg-accent hover:text-accent-foreground"
       >
         Share your story
       </Link>

@@ -34,7 +34,7 @@ export function ArticleHeader({
         <span className="text-border-card">·</span>
         <span>{readingTime} min read</span>
         <span className="text-border-card">·</span>
-        <span className="text-accent">Share</span>
+        <span className="text-accent-text">Share</span>
       </div>
     </article>
   );

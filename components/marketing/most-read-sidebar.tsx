@@ -10,7 +10,7 @@ type RankedEssay = {
 export function MostReadSidebar({ essays }: { essays: RankedEssay[] }) {
   return (
     <aside className="rounded-[3px] border border-border-soft bg-surface p-7">
-      <div className="mb-2 font-mono text-[11px] tracking-[.16em] text-accent uppercase">
+      <div className="mb-2 font-mono text-[11px] tracking-[.16em] text-accent-text uppercase">
         Most read this week
       </div>
       {essays.map((essay, index) => (

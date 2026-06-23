@@ -20,12 +20,12 @@ export const mdxComponents = {
   ),
   blockquote: (props: ComponentProps<"blockquote">) => (
     <blockquote
-      className="my-10 border-l-[3px] border-sage pl-7 font-serif text-[26px] leading-[1.3] text-[#2c3a30] md:text-[30px]"
+      className="my-10 border-l-[3px] border-sage pl-7 font-serif text-[26px] leading-[1.3] text-emphasis-text md:text-[30px]"
       {...props}
     />
   ),
   a: (props: ComponentProps<"a">) => (
-    <a className="text-accent underline" {...props} />
+    <a className="text-accent-text underline" {...props} />
   ),
   strong: (props: ComponentProps<"strong">) => (
     <strong className="font-semibold text-ink" {...props} />

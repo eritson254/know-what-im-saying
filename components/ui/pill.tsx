@@ -17,7 +17,7 @@ export function Pill({
 }: PillProps) {
   const variantClasses =
     variant === "solid"
-      ? "bg-pill-soft text-accent"
+      ? "bg-pill-soft text-accent-text"
       : "border border-border-card text-muted-1";
 
   return (

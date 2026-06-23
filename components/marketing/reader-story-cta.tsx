@@ -7,7 +7,7 @@ export function ReaderStoryCta() {
     <section className="px-6 pb-16 md:px-14 md:pb-[84px]">
       <div className="mx-auto max-w-[1240px] rounded-[3px] border border-border-strong bg-surface px-7 py-14 text-center md:px-14 md:py-[66px]">
         <div className="mx-auto mb-5 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-pill">
-          <Feather size={22} strokeWidth={1.6} className="text-accent" />
+          <Feather size={22} strokeWidth={1.6} className="text-accent-text" />
         </div>
         <div className="mb-[22px] inline-block">
           <Pill>Share your story</Pill>
@@ -22,7 +22,7 @@ export function ReaderStoryCta() {
         </p>
         <Link
           href="/share-your-story"
-          className="inline-block rounded-[2px] border-[1.5px] border-accent px-7 py-[13px] text-[16px] font-semibold text-accent no-underline hover:bg-accent hover:text-accent-foreground"
+          className="inline-block rounded-[2px] border-[1.5px] border-accent-text px-7 py-[13px] text-[16px] font-semibold text-accent-text no-underline hover:bg-accent hover:text-accent-foreground"
         >
           Share your story
         </Link>

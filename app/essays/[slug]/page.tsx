@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { ReadingProgressBar } from "@/components/articles/reading-progress-bar";
 import { ArticleHeader } from "@/components/articles/article-header";
+import { ReadingPreferences } from "@/components/articles/reading-preferences";
 import { SeriesNavBar } from "@/components/articles/series-nav-bar";
+import { SeriesProgressTracker } from "@/components/articles/series-progress-tracker";
 import { MdxContent } from "@/components/articles/mdx-content";
 import { AuthorNote } from "@/components/articles/author-note";
 import {
@@ -94,6 +96,9 @@ export default async function EssayPage({
       <ReadingProgressBar />
 
       <ArticleHeader frontmatter={essay.frontmatter} readingTime={essay.readingTime} />
+      <ReadingPreferences />
+
+      {series && <SeriesProgressTracker seriesSlug={series.slug} essaySlug={essay.slug} />}
 
       {series && (
         <SeriesNavBar

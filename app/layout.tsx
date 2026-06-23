@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
+import { ThemeScript } from "@/components/theme/theme-script";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -38,6 +39,7 @@ export default function RootLayout({
       className={`${newsreader.variable} ${hankenGrotesk.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <ThemeScript />
         {children}
         <Footer />
       </body>

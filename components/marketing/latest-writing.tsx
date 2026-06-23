@@ -27,7 +27,7 @@ export function LatestWriting({
             </h2>
             <Link
               href="/essays"
-              className="font-mono text-[12px] tracking-[.1em] text-muted-3 uppercase no-underline hover:text-accent"
+              className="font-mono text-[12px] tracking-[.1em] text-muted-3 uppercase no-underline hover:text-accent-text"
             >
               View all essays →
             </Link>

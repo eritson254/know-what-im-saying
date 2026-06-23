@@ -1,12 +1,47 @@
-import Link from "next/link";
+"use client";
 
-type ReadingOrderEntry = {
+import Link from "next/link";
+import { useSeriesProgressSnapshot } from "@/lib/series-progress/use-series-progress";
+
+export type ReadingOrderEntry = {
   installment: number;
   title: string;
   href: string | null;
+  slug: string | null;
 };
 
-export function ReadingOrder({ entries }: { entries: ReadingOrderEntry[] }) {
+type ReadState = "unread" | "reading-now" | "read" | "upcoming";
+
+const STATE_LABEL: Record<ReadState, string> = {
+  unread: "Published",
+  "reading-now": "Reading now",
+  read: "Read",
+  upcoming: "Upcoming",
+};
+
+const STATE_BADGE_CLASSES: Record<ReadState, string> = {
+  unread: "bg-chip-neutral text-muted-1",
+  "reading-now": "bg-accent text-accent-foreground",
+  read: "bg-sage text-accent-foreground",
+  upcoming: "border border-border-card text-muted-4",
+};
+
+export function ReadingOrder({
+  seriesSlug,
+  entries,
+}: {
+  seriesSlug: string;
+  entries: ReadingOrderEntry[];
+}) {
+  const progress = useSeriesProgressSnapshot(seriesSlug);
+
+  function getState(entry: ReadingOrderEntry): ReadState {
+    if (!entry.slug) return "upcoming";
+    if (progress?.readEssays.includes(entry.slug)) return "read";
+    if (progress && progress.lastRead === entry.slug) return "reading-now";
+    return "unread";
+  }
+
   return (
     <section className="mx-auto w-full max-w-[1180px] px-6 py-12 md:px-16 md:py-[72px]">
       <div className="grid gap-10 md:grid-cols-[.55fr_1.45fr] md:gap-14">
@@ -21,6 +56,7 @@ export function ReadingOrder({ entries }: { entries: ReadingOrderEntry[] }) {
         <div className="flex flex-col">
           {entries.map((entry, index) => {
             const isPublished = entry.href !== null;
+            const state = getState(entry);
             const row = (
               <span
                 className={`flex items-center gap-6 border-t border-border py-5 ${
@@ -29,7 +65,7 @@ export function ReadingOrder({ entries }: { entries: ReadingOrderEntry[] }) {
               >
                 <span
                   className={`min-w-[46px] font-serif text-[26px] ${
-                    isPublished ? "text-sage" : "text-[#c7c3b3]"
+                    isPublished ? "text-sage" : "text-muted-4"
                   }`}
                 >
                   {String(entry.installment).padStart(2, "0")}
@@ -42,13 +78,9 @@ export function ReadingOrder({ entries }: { entries: ReadingOrderEntry[] }) {
                   {entry.title}
                 </span>
                 <span
-                  className={`shrink-0 whitespace-nowrap rounded-full px-[11px] py-[5px] font-mono text-[10px] tracking-[.06em] uppercase ${
-                    isPublished
-                      ? "bg-[#E6E3D6] text-[#5f6253]"
-                      : "border border-border-card text-[#a9a795]"
-                  }`}
+                  className={`shrink-0 whitespace-nowrap rounded-full px-[11px] py-[5px] font-mono text-[10px] tracking-[.06em] uppercase ${STATE_BADGE_CLASSES[state]}`}
                 >
-                  {isPublished ? "Published" : "Upcoming"}
+                  {STATE_LABEL[state]}
                 </span>
               </span>
             );

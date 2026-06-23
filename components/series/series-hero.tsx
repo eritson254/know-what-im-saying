@@ -1,17 +1,17 @@
-import Link from "next/link";
 import { Pill } from "@/components/ui/pill";
 import { PlaceholderImage } from "@/components/ui/placeholder-image";
+import { SeriesCta } from "@/components/series/series-cta";
 import { getTopicBySlug } from "@/lib/content/topics";
 import type { SeriesFrontmatter } from "@/lib/content/schema";
 
 export function SeriesHero({
   series,
   publishedCount,
-  firstInstallmentSlug,
+  publishedInstallments,
 }: {
   series: { slug: string; frontmatter: SeriesFrontmatter };
   publishedCount: number;
-  firstInstallmentSlug: string | null;
+  publishedInstallments: { slug: string; installment: number }[];
 }) {
   const topic = getTopicBySlug(series.frontmatter.topics[0] ?? "");
   const total = series.frontmatter.totalPlanned;
@@ -33,7 +33,7 @@ export function SeriesHero({
               {subtitle}
             </p>
           )}
-          <p className="mb-8 max-w-[48ch] text-[17px] leading-[1.65] text-[#5a5c51] md:text-[18px]">
+          <p className="mb-8 max-w-[48ch] text-[17px] leading-[1.65] text-muted-1 md:text-[18px]">
             {series.frontmatter.description}
           </p>
           <div className="mb-[34px] flex flex-wrap items-center gap-2">
@@ -45,14 +45,10 @@ export function SeriesHero({
             </Pill>
             <Pill variant="outline">{publishedCount} published</Pill>
           </div>
-          {firstInstallmentSlug && (
-            <Link
-              href={`/essays/${firstInstallmentSlug}`}
-              className="inline-block rounded-[2px] bg-accent px-[26px] py-[14px] text-[16px] font-semibold text-accent-foreground no-underline hover:bg-accent-hover"
-            >
-              Start with Essay One
-            </Link>
-          )}
+          <SeriesCta
+            seriesSlug={series.slug}
+            publishedInstallments={publishedInstallments}
+          />
         </div>
         <PlaceholderImage label="series cover" aspectRatio="3 / 4" />
       </div>

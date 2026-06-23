@@ -13,9 +13,9 @@ type ButtonProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-accent text-accent-foreground hover:bg-accent-hover",
   outline:
-    "border-[1.5px] border-accent text-accent hover:bg-accent hover:text-accent-foreground",
+    "border-[1.5px] border-accent-text text-accent-text hover:bg-accent hover:text-accent-foreground",
   ghost:
-    "text-ink border-b-[1.5px] border-border-card hover:border-accent rounded-none px-0 py-0",
+    "text-ink border-b-[1.5px] border-border-card hover:border-accent-text rounded-none px-0 py-0",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

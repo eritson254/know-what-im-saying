@@ -27,7 +27,7 @@ export function CommunityNewsletter() {
       </div>
       <div className="flex flex-col rounded-[3px] border border-border-strong bg-surface p-9 md:p-[50px]">
         <div className="mb-[22px] flex h-[46px] w-[46px] items-center justify-center rounded-full bg-pill">
-          <Mail size={22} strokeWidth={1.6} className="text-accent" />
+          <Mail size={22} strokeWidth={1.6} className="text-accent-text" />
         </div>
         <div className="mb-[18px] font-mono text-[12px] tracking-[.16em] text-sage uppercase">
           The Newsletter
