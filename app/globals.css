@@ -70,7 +70,7 @@
   --color-chip-neutral: var(--color-chip-neutral);
 
   --font-serif: var(--font-newsreader);
-  --font-sans: var(--font-hanken-grotesk);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
 }
 

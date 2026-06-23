@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Newsreader, Hanken_Grotesk, Space_Mono } from "next/font/google";
+import { Newsreader, Inter, Space_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { ThemeScript } from "@/components/theme/theme-script";
 import "./globals.css";
@@ -11,8 +11,8 @@ const newsreader = Newsreader({
   weight: ["400", "500", "600"],
 });
 
-const hankenGrotesk = Hanken_Grotesk({
-  variable: "--font-hanken-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${hankenGrotesk.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${newsreader.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeScript />
