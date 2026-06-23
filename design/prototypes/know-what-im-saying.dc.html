@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  ::selection { background: #cfd9c6; }
+  [data-screen-label] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); background-repeat: repeat; }
+</style>
+</helmet>
+
+<div style="{{ rootStyle }}">
+
+  <!-- ============================ DESKTOP: HOMEPAGE ============================ -->
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8c7e;">Desktop · Homepage</div>
+    <div data-screen-label="Homepage (desktop)" style="width:1440px;background-color:#F4F1E8;border-radius:3px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+
+      <!-- Utility bar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 56px;border-bottom:1px solid #E2DECF;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9a9c8e;">
+        <span>Saturday · June 23, 2026</span>
+        <span style="color:var(--accent,#2C4636);">Issue №14</span>
+        <span style="display:flex;gap:20px;align-items:center;"><a href="#" style="color:#9a9c8e;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Search</a><a href="#" style="color:var(--accent,#2C4636);text-decoration:none;">Subscribe</a></span>
+      </div>
+
+      <!-- Nameplate masthead -->
+      <div style="text-align:center;padding:46px 56px 28px;">
+        <div style="display:flex;justify-content:center;margin-bottom:16px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></div>
+        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage,#8FA189);margin-bottom:18px;">A reading publication · est. 2026</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:74px;line-height:1;letter-spacing:-.015em;margin:0;color:#1f211c;">Know What I&rsquo;m Saying?</h1>
+        <p style="font-family:'Newsreader',serif;font-style:italic;font-size:21px;line-height:1.4;color:#6B6D62;margin:16px auto 0;max-width:46ch;">Thoughtful writing for people trying to make sense of modern life.</p>
+      </div>
+
+      <!-- Ruled nav -->
+      <nav style="display:flex;align-items:center;justify-content:center;gap:36px;padding:16px 56px;border-top:1px solid #c7c2b0;border-bottom:1px solid #c7c2b0;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;">
+        <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Essays</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Series</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Topics</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Notes</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Start Here</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Reading List</a><a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">About</a>
+      </nav>
+
+      <!-- Cover story -->
+      <section style="padding:60px 56px;max-width:1240px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;">
+          <div>
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:26px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#DCE2D0;padding:6px 13px;border-radius:100px;">Cover Story</span><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4d5043;border:1px solid #d6d1c0;padding:6px 13px;border-radius:100px;">Love &amp; Relationships</span></div>
+            <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:78px;line-height:1;letter-spacing:-.02em;margin:0 0 22px;color:#1f211c;">The Comfort of Almost</h2>
+            <p style="font-family:'Newsreader',serif;font-style:italic;font-size:25px;line-height:1.35;color:#4d5043;margin:0 0 22px;max-width:32ch;">Why ambiguous connections can keep people emotionally attached far longer than they ever expect.</p>
+            <p style="font-size:18px;line-height:1.65;color:#54564b;margin:0 0 30px;max-width:46ch;">There is a particular kind of relationship that never quite becomes one &mdash; and the waiting, it turns out, carries a quiet cost we rarely name.</p>
+            <div style="display:flex;align-items:center;gap:24px;">
+              <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:16px;font-weight:600;padding:14px 26px;border-radius:2px;" style-hover="background:#1f3527;">Read the essay</a>
+              <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#86887a;">By the Editor · 8 min read</span>
+            </div>
+          </div>
+          <div>
+            <div style="aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;display:flex;align-items:center;justify-content:center;flex:none;"><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9C8B;">cover image</span></div>
+            <div style="font-family:'Newsreader',serif;font-style:italic;font-size:14px;color:#9a9c8e;margin-top:12px;text-align:right;">A quiet, cinematic image sets the tone.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest + Most read -->
+      <section style="border-top:1px solid #c7c2b0;padding:54px 56px 72px;max-width:1240px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 330px;gap:64px;align-items:start;">
+          <div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;">
+              <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;margin:0;color:#1f211c;">Latest writing</h2>
+              <a href="#" style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#86887a;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">View all essays &rarr;</a>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;">
+              <a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;color:#F4F1E8;background:var(--accent,#2C4636);border:1px solid var(--accent,#2C4636);padding:8px 16px;border-radius:100px;text-decoration:none;">All</a><a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:500;color:#4d5043;border:1px solid #d6d1c0;padding:8px 16px;border-radius:100px;text-decoration:none;" style-hover="border-color:var(--accent,#2C4636);color:var(--accent,#2C4636);">Life</a><a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:500;color:#4d5043;border:1px solid #d6d1c0;padding:8px 16px;border-radius:100px;text-decoration:none;" style-hover="border-color:var(--accent,#2C4636);color:var(--accent,#2C4636);">Psychology</a><a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:500;color:#4d5043;border:1px solid #d6d1c0;padding:8px 16px;border-radius:100px;text-decoration:none;" style-hover="border-color:var(--accent,#2C4636);color:var(--accent,#2C4636);">Love &amp; Relationships</a><a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:500;color:#4d5043;border:1px solid #d6d1c0;padding:8px 16px;border-radius:100px;text-decoration:none;" style-hover="border-color:var(--accent,#2C4636);color:var(--accent,#2C4636);">Culture &amp; Tech</a><a href="#" style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:500;color:#4d5043;border:1px solid #d6d1c0;padding:8px 16px;border-radius:100px;text-decoration:none;" style-hover="border-color:var(--accent,#2C4636);color:var(--accent,#2C4636);">Money &amp; Work</a>
+            </div>
+            
+          <a href="#" style="display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center;padding:30px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.78;">
+            <div style="width:200px;"><div style="aspect-ratio:7/5;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;display:flex;align-items:center;justify-content:center;flex:none;"><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9C8B;">essay image</span></div></div>
+            <div>
+              <div style="margin-bottom:12px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Psychology</span></div>
+              <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.08;margin:0 0 10px;color:#1f211c;">Why Rejection Can Feel Like a Verdict on Your Worth</h3>
+              <p style="font-size:16px;line-height:1.55;color:#6B6D62;margin:0 0 14px;max-width:52ch;">The brain treats social loss like physical pain &mdash; and understanding that changes how you carry it.</p>
+              <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9a9c8e;">June 16 · 7 min read</div>
+            </div>
+          </a>
+            
+          <a href="#" style="display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center;padding:30px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.78;">
+            <div style="width:200px;"><div style="aspect-ratio:7/5;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;display:flex;align-items:center;justify-content:center;flex:none;"><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9C8B;">essay image</span></div></div>
+            <div>
+              <div style="margin-bottom:12px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Culture &amp; Tech</span></div>
+              <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.08;margin:0 0 10px;color:#1f211c;">We Trained Ourselves to Skim</h3>
+              <p style="font-size:16px;line-height:1.55;color:#6B6D62;margin:0 0 14px;max-width:52ch;">Attention is the new literacy. On what it means to read slowly in a feed built to prevent it.</p>
+              <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9a9c8e;">June 2 · 6 min read</div>
+            </div>
+          </a>
+          </div>
+          <aside style="border:1px solid #ddd8c8;border-radius:3px;padding:30px 28px;background:#FBF9F2;">
+            <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent,#2C4636);margin-bottom:8px;">Most read this week</div>
+            
+            <a href="#" style="display:flex;gap:18px;align-items:baseline;padding:18px 0;text-decoration:none;" style-hover="opacity:.65;">
+              <span style="font-family:'Newsreader',serif;font-size:22px;color:var(--sage,#8FA189);min-width:26px;">01</span>
+              <span style="flex:1;">
+                <span style="display:block;font-family:'Newsreader',serif;font-size:19px;line-height:1.2;color:#1f211c;margin-bottom:5px;">The Quiet Arithmetic of Feeling Behind</span>
+                <span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">9 min read</span>
+              </span>
+            </a>
+            <a href="#" style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid #ddd8c8;text-decoration:none;" style-hover="opacity:.65;">
+              <span style="font-family:'Newsreader',serif;font-size:22px;color:var(--sage,#8FA189);min-width:26px;">02</span>
+              <span style="flex:1;">
+                <span style="display:block;font-family:'Newsreader',serif;font-size:19px;line-height:1.2;color:#1f211c;margin-bottom:5px;">The Person Who Loved Harder</span>
+                <span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">6 min read</span>
+              </span>
+            </a>
+            <a href="#" style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid #ddd8c8;text-decoration:none;" style-hover="opacity:.65;">
+              <span style="font-family:'Newsreader',serif;font-size:22px;color:var(--sage,#8FA189);min-width:26px;">03</span>
+              <span style="flex:1;">
+                <span style="display:block;font-family:'Newsreader',serif;font-size:19px;line-height:1.2;color:#1f211c;margin-bottom:5px;">How to Leave Without Waiting for Closure</span>
+                <span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">7 min read</span>
+              </span>
+            </a>
+            <a href="#" style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid #ddd8c8;text-decoration:none;" style-hover="opacity:.65;">
+              <span style="font-family:'Newsreader',serif;font-size:22px;color:var(--sage,#8FA189);min-width:26px;">04</span>
+              <span style="flex:1;">
+                <span style="display:block;font-family:'Newsreader',serif;font-size:19px;line-height:1.2;color:#1f211c;margin-bottom:5px;">We Trained Ourselves to Skim</span>
+                <span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">6 min read</span>
+              </span>
+            </a>
+            <a href="#" style="display:flex;gap:18px;align-items:baseline;padding:18px 0;border-top:1px solid #ddd8c8;text-decoration:none;" style-hover="opacity:.65;">
+              <span style="font-family:'Newsreader',serif;font-size:22px;color:var(--sage,#8FA189);min-width:26px;">05</span>
+              <span style="flex:1;">
+                <span style="display:block;font-family:'Newsreader',serif;font-size:19px;line-height:1.2;color:#1f211c;margin-bottom:5px;">What Healthy Love Feels Like After</span>
+                <span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">8 min read</span>
+              </span>
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Featured series band -->
+      <section style="background:#E8EADD;padding:80px 56px;">
+        <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;">
+          <div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#DBDFCB 0 12px,#E2E5D4 12px 24px);border-radius:2px;display:flex;align-items:center;justify-content:center;"><span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8b9182;">series cover</span></div>
+          <div>
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:22px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#DCE2D0;padding:6px 13px;border-radius:100px;">Featured series</span><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent,#2C4636);background:#DCE2D0;padding:6px 13px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--sage,#8FA189);"></span>Ongoing</span></div>
+            <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:58px;line-height:1.02;margin:0 0 20px;color:#1f211c;">Unrequited Love</h2>
+            <p style="font-size:20px;line-height:1.6;color:#4d5043;max-width:46ch;margin:0 0 30px;">A story-led essay series about attachment, rejection, mixed signals, boundaries, and learning not to beg to be chosen.</p>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:300px;">
+              <div style="display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#5f6253;"><span>3 of 6 essays</span><span>50%</span></div>
+              <div style="height:5px;background:#cdd4c2;border-radius:100px;overflow:hidden;"><div style="height:5px;width:50%;background:var(--accent,#2C4636);border-radius:100px;"></div></div>
+            </div>
+            <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:16px;font-weight:600;padding:14px 26px;border-radius:2px;" style-hover="background:#1f3527;">Begin the series</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start here -->
+      <section style="padding:84px 56px;max-width:1240px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:.7fr 1.3fr;gap:64px;">
+          <div>
+            <div style="margin-bottom:14px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Start here</span></div>
+            <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:38px;margin:0 0 14px;color:#1f211c;">New here? Begin with these.</h2>
+            <p style="font-size:16px;line-height:1.6;color:#6B6D62;margin:0;max-width:30ch;">A few pieces that explain what this corner of the internet is about.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="#" style="display:flex;gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.62;"><span style="font-family:'Newsreader',serif;font-size:24px;color:var(--sage,#8FA189);min-width:42px;">01</span><span style="font-family:'Newsreader',serif;font-size:25px;color:#1f211c;line-height:1.2;">What this publication is actually about</span></a>
+            <a href="#" style="display:flex;gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.62;"><span style="font-family:'Newsreader',serif;font-size:24px;color:var(--sage,#8FA189);min-width:42px;">02</span><span style="font-family:'Newsreader',serif;font-size:25px;color:#1f211c;line-height:1.2;">The Person Who Loved Harder</span></a>
+            <a href="#" style="display:flex;gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.62;"><span style="font-family:'Newsreader',serif;font-size:24px;color:var(--sage,#8FA189);min-width:42px;">03</span><span style="font-family:'Newsreader',serif;font-size:25px;color:#1f211c;line-height:1.2;">On Feeling Behind in a Life That Isn&rsquo;t a Race</span></a>
+            <a href="#" style="display:flex;gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #E2DECF;border-bottom:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.62;"><span style="font-family:'Newsreader',serif;font-size:24px;color:var(--sage,#8FA189);min-width:42px;">04</span><span style="font-family:'Newsreader',serif;font-size:25px;color:#1f211c;line-height:1.2;">How to Leave Without Waiting for Closure</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reader story CTA -->
+      <section style="padding:0 56px 84px;max-width:1240px;margin:0 auto;">
+        <div style="border:1px solid #c7c2b0;border-radius:3px;padding:66px 56px;text-align:center;background:#FBF9F2;">
+          <div style="width:50px;height:50px;border-radius:50%;background:#DCE2D0;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4636" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></div>
+          <div style="display:inline-block;margin-bottom:22px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 12px;border-radius:100px;">Share your story</span></div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:44px;line-height:1.08;margin:0 auto 18px;max-width:22ch;color:#1f211c;">Have a story you cannot stop thinking about?</h2>
+          <p style="font-size:18px;line-height:1.6;color:#6B6D62;margin:0 auto 32px;max-width:50ch;">A relationship, friendship, betrayal, loss, or moment that changed the way you see yourself. Share it anonymously &mdash; it may inspire a future essay.</p>
+          <a href="#" style="display:inline-block;border:1.5px solid var(--accent,#2C4636);color:var(--accent,#2C4636);text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:2px;" style-hover="background:var(--accent,#2C4636);color:#F4F1E8;">Share your story</a>
+        </div>
+      </section>
+
+      <!-- Community + Newsletter -->
+      <section style="padding:0 56px 88px;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+        <div style="background:var(--accent,#2C4636);color:#EDEFE3;border-radius:3px;padding:50px 46px;display:flex;flex-direction:column;">
+          <div style="width:46px;height:46px;border-radius:50%;background:rgba(237,239,227,.12);display:flex;align-items:center;justify-content:center;margin-bottom:22px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EDEFE3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+          <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#9fb09a;margin-bottom:18px;">WhatsApp Channel</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;line-height:1.1;margin:0 0 14px;">Stay close to the writing</h3>
+          <p style="font-size:16px;line-height:1.6;color:#c2cabb;margin:0 0 28px;max-width:34ch;">New essays, notes, and reading recommendations &mdash; quietly, a couple of times a week.</p>
+          <a href="#" style="margin-top:auto;align-self:flex-start;background:#EDEFE3;color:var(--accent,#2C4636);text-decoration:none;font-size:15px;font-weight:600;padding:12px 22px;border-radius:2px;" style-hover="background:#fff;">Join the channel</a>
+        </div>
+        <div style="border:1px solid #c7c2b0;border-radius:3px;padding:50px 46px;display:flex;flex-direction:column;background:#FBF9F2;">
+          <div style="width:46px;height:46px;border-radius:50%;background:#DCE2D0;display:flex;align-items:center;justify-content:center;margin-bottom:22px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4636" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+          <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage,#8FA189);margin-bottom:18px;">The Newsletter</div>
+          <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;line-height:1.1;margin:0 0 14px;color:#1f211c;">A letter for people who still like to read.</h3>
+          <p style="font-size:16px;line-height:1.6;color:#6B6D62;margin:0 0 26px;max-width:34ch;">New essays, notes, and ideas worth sitting with.</p>
+          <div style="display:flex;gap:10px;margin-top:auto;">
+            <input type="email" placeholder="you@email.com" style="flex:1;border:1px solid #cfcab8;background:#fff;border-radius:2px;padding:12px 14px;font-size:15px;font-family:'Hanken Grotesk',sans-serif;color:#222420;outline:none;">
+            <button style="background:var(--accent,#2C4636);color:#F4F1E8;border:none;font-size:15px;font-weight:600;padding:12px 22px;border-radius:2px;cursor:pointer;font-family:'Hanken Grotesk',sans-serif;" style-hover="background:#1f3527;">Subscribe</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colophon footer -->
+      <footer style="border-top:1px solid #c7c2b0;padding:60px 56px 46px;">
+        <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;">
+          <div>
+            <div style="font-family:'Newsreader',serif;font-size:30px;color:#1f211c;margin-bottom:12px;">Know What I&rsquo;m Saying?</div>
+            <p style="font-size:15px;line-height:1.65;color:#6B6D62;margin:0;max-width:34ch;">A publication about life, psychology, love, technology, and the stories people carry.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;margin-bottom:4px;">Read</span>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Essays</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Series</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Topics</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Reading List</a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;margin-bottom:4px;">Connect</span>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Newsletter</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">WhatsApp Channel</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Share your story</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">About</a>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;margin-bottom:4px;">Legal</span>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Privacy</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Terms</a>
+            <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Editorial Policy</a>
+          </div>
+        </div>
+        <div style="max-width:1240px;margin:40px auto 0;padding-top:24px;border-top:1px solid #E2DECF;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9a9c8e;">
+          <span>© 2026 Know What I&rsquo;m Saying?</span>
+          <span>Made for slow afternoons</span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ============================ DESKTOP: ARTICLE ============================ -->
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8c7e;">Desktop · Individual Essay</div>
+    <div data-screen-label="Article (desktop)" style="width:1440px;background-color:#F4F1E8;border-radius:3px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 64px;border-bottom:1px solid #ECE7D8;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9a9c8e;">
+        <span>A reading publication · est. 2026</span>
+        <span style="color:var(--accent,#2C4636);">Issue №14 · June 2026</span>
+      </div>
+      <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid #E2DECF;">
+        <div style="display:flex;align-items:center;gap:11px;"><span style="display:flex;color:var(--accent,#2C4636);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:24px;color:#222420;">Know What I&rsquo;m Saying?</span></div>
+        <nav style="display:flex;gap:30px;align-items:center;font-size:15px;color:#3b3c34;">
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Essays</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Series</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Topics</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Notes</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Start Here</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">About</a>
+        </nav>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="color:#3b3c34;"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><line x1="12.2" y1="12.2" x2="16" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:14px;font-weight:600;padding:9px 18px;border-radius:2px;" style-hover="background:#1f3527;">Join</a>
+        </div>
+      </header>
+
+      <!-- reading progress -->
+      <div style="height:3px;background:#E2DECF;"><div style="height:3px;width:38%;background:var(--accent,#2C4636);"></div></div>
+
+      <!-- Article header -->
+      <article style="max-width:720px;margin:0 auto;padding:72px 24px 0;">
+        <div style="display:flex;gap:8px;align-items:center;justify-content:center;margin-bottom:26px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:6px 13px;border-radius:100px;">Love &amp; Relationships</span><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4d5043;border:1px solid #d6d1c0;padding:6px 13px;border-radius:100px;">Series · Essay 3 of 6</span></div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:64px;line-height:1.05;letter-spacing:-.01em;text-align:center;margin:0 0 24px;color:#222420;">The Comfort of Almost</h1>
+        <p style="font-size:22px;line-height:1.5;color:#54564b;text-align:center;margin:0 0 34px;font-style:italic;font-family:'Newsreader',serif;">Why ambiguous connections can keep people emotionally attached for far longer than they ever expect.</p>
+        <div style="display:flex;gap:16px;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.05em;color:#86887a;text-transform:uppercase;padding-bottom:36px;border-bottom:1px solid #E2DECF;"><span>June 23, 2026</span><span style="color:#cdc9b9;">·</span><span>8 min read</span><span style="color:#cdc9b9;">·</span><span style="color:var(--accent,#2C4636);">Share</span></div>
+      </article>
+
+      <!-- Series nav bar -->
+      <div style="max-width:720px;margin:24px auto 0;padding:0 24px;">
+        <div style="background:#E8EADD;border-radius:3px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;flex-direction:column;gap:3px;">
+            <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6a7060;">Series · Unrequited Love</span>
+            <span style="font-size:14px;color:#3b3c34;font-weight:600;">Essay 3 of 6</span>
+          </div>
+          <div style="display:flex;gap:18px;align-items:center;font-size:13px;font-weight:600;">
+            <a href="#" style="color:#5f6253;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Start from Essay One</a>
+            <a href="#" style="color:var(--accent,#2C4636);text-decoration:none;border:1px solid #b9c2ad;border-radius:2px;padding:6px 12px;" style-hover="background:#fff;">&larr; Prev</a>
+            <a href="#" style="color:var(--accent,#2C4636);text-decoration:none;border:1px solid #b9c2ad;border-radius:2px;padding:6px 12px;" style-hover="background:#fff;">Next &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article body -->
+      <article style="max-width:720px;margin:0 auto;padding:48px 24px 0;font-size:19px;line-height:1.8;color:#2c2e26;">
+        <p style="margin:0 0 28px;"><span style="font-family:'Newsreader',serif;font-size:62px;line-height:.8;float:left;margin:8px 14px 0 0;color:#222420;">T</span>here is a particular kind of relationship that never quite becomes one. It lives in the space between a held glance and a sent text, in the warmth of someone&rsquo;s attention without the weight of their commitment. We call it many things &mdash; talking, seeing each other, figuring it out &mdash; but underneath the language is a single, quiet hope: that <em>almost</em> will eventually become <em>yes</em>.</p>
+        <p style="margin:0 0 28px;">The strange thing is how durable almost can be. A clear rejection ends something. Ambiguity, by contrast, keeps the door propped open just enough to keep you standing in the hallway, certain that any moment now the light inside will come on.</p>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;line-height:1.15;margin:48px 0 20px;color:#222420;">Why the in-between holds us</h2>
+        <p style="margin:0 0 28px;">Psychologists have a name for part of this: intermittent reinforcement. When affection arrives unpredictably &mdash; warm one week, distant the next &mdash; the brain doesn&rsquo;t learn to let go. It learns to wait. The inconsistency isn&rsquo;t a flaw in the connection; to the nervous system, it <em>is</em> the connection.</p>
+        <blockquote style="margin:40px 0;padding:0 0 0 28px;border-left:3px solid var(--sage,#8FA189);font-family:'Newsreader',serif;font-size:30px;line-height:1.3;color:#2c3a30;">We don&rsquo;t stay for who someone is. We stay for who they occasionally let us believe they might become.</blockquote>
+        <p style="margin:0 0 28px;">And so the comfort of almost is really the comfort of possibility &mdash; a future we get to keep authoring as long as nothing is ever decided. Closure would mean editing the story down to what actually happened. Most of us would rather keep the draft open.</p>
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:34px;line-height:1.15;margin:48px 0 20px;color:#222420;">What the waiting costs</h2>
+        <p style="margin:0 0 28px;">The bill comes quietly. Months pass. You become fluent in someone&rsquo;s moods and illiterate in your own needs. The question slowly shifts from <em>do I want this?</em> to <em>will they finally choose me?</em> &mdash; and somewhere in that shift, you stop being a person with preferences and become a person auditioning.</p>
+
+        <!-- Mid-article quiet CTA -->
+        <div style="margin:44px 0;padding:30px 32px;background:#EEEBE0;border-radius:3px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+          <div>
+            <div style="font-family:'Newsreader',serif;font-size:22px;color:#222420;margin-bottom:4px;">New essays, quietly delivered.</div>
+            <div style="font-size:15px;color:#6B6D62;">Get the next installment of Unrequited Love on WhatsApp.</div>
+          </div>
+          <a href="#" style="white-space:nowrap;background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:14px;font-weight:600;padding:11px 20px;border-radius:2px;" style-hover="background:#1f3527;">Join channel</a>
+        </div>
+
+        <p style="margin:0 0 28px;">Leaving an almost is harder than leaving a relationship, because there is no event to point to &mdash; nothing broke, so nothing has to be repaired. You simply have to decide that hope, by itself, is not a reason to stay. That a maybe you have to chase is already an answer.</p>
+        <p style="margin:0 0 40px;font-family:'Newsreader',serif;font-size:26px;line-height:1.4;color:#2c3a30;">The opposite of almost isn&rsquo;t heartbreak. It&rsquo;s being somewhere you don&rsquo;t have to wonder.</p>
+      </article>
+
+      <!-- Author note -->
+      <div style="max-width:720px;margin:0 auto;padding:36px 24px;border-top:1px solid #E2DECF;">
+        <div style="display:flex;gap:18px;align-items:center;">
+          <div style="width:52px;height:52px;border-radius:50%;background:repeating-linear-gradient(135deg,#DBDFCB 0 7px,#E2E5D4 7px 14px);flex:none;"></div>
+          <div style="font-size:15px;line-height:1.55;color:#6B6D62;">Written by <span style="color:#222420;font-weight:600;">the editor</span>. <span style="color:#222420;">Know What I&rsquo;m Saying?</span> is a publication about life, psychology, love, technology, and the stories people carry.</div>
+        </div>
+      </div>
+
+      <!-- Related reading -->
+      <section style="background:#E8EADD;padding:64px;">
+        <div style="max-width:1100px;margin:0 auto;">
+          <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:30px;margin:0 0 32px;color:#222420;">Continue the series</h2>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+            <a href="#" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;" style-hover="opacity:.7;"><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#2C4636);">Essay 04</div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.15;margin:0;color:#222420;">Loving Someone Who Only Loves What You Give</h3><span style="font-family:'Space Mono',monospace;font-size:11px;color:#7a7e6e;">9 min read</span></a>
+            <a href="#" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;" style-hover="opacity:.7;"><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#2C4636);">Essay 05</div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.15;margin:0;color:#222420;">How to Leave Without Waiting for Closure</h3><span style="font-family:'Space Mono',monospace;font-size:11px;color:#7a7e6e;">7 min read</span></a>
+            <a href="#" style="text-decoration:none;display:flex;flex-direction:column;gap:12px;" style-hover="opacity:.7;"><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#2C4636);">Essay 06</div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.15;margin:0;color:#222420;">What Healthy Love Feels Like After</h3><span style="font-family:'Space Mono',monospace;font-size:11px;color:#7a7e6e;">8 min read</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reader story CTA -->
+      <section style="padding:72px 64px;max-width:1180px;margin:0 auto;text-align:center;">
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:38px;line-height:1.12;margin:0 auto 16px;max-width:24ch;color:#222420;">Has something like this happened to you?</h2>
+        <p style="font-size:17px;line-height:1.6;color:#6B6D62;margin:0 auto 28px;max-width:48ch;">Share your story anonymously. It may inspire a future essay.</p>
+        <a href="#" style="display:inline-block;border:1.5px solid var(--accent,#2C4636);color:var(--accent,#2C4636);text-decoration:none;font-size:16px;font-weight:600;padding:13px 28px;border-radius:2px;" style-hover="background:var(--accent,#2C4636);color:#F4F1E8;">Share your story</a>
+      </section>
+
+      <footer style="border-top:1px solid #c7c2b0;padding:44px 64px;text-align:center;">
+        <div style="font-family:'Newsreader',serif;font-size:24px;color:#1f211c;margin-bottom:8px;">Know What I&rsquo;m Saying?</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;">© 2026 · A reading publication · Made for slow afternoons</div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ============================ DESKTOP: SERIES ============================ -->
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8c7e;">Desktop · Individual Series</div>
+    <div data-screen-label="Series (desktop)" style="width:1440px;background-color:#F4F1E8;border-radius:3px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 64px;border-bottom:1px solid #ECE7D8;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9a9c8e;">
+        <span>A reading publication · est. 2026</span>
+        <span style="color:var(--accent,#2C4636);">Issue №14 · June 2026</span>
+      </div>
+      <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid #E2DECF;">
+        <div style="display:flex;align-items:center;gap:11px;"><span style="display:flex;color:var(--accent,#2C4636);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:24px;color:#222420;">Know What I&rsquo;m Saying?</span></div>
+        <nav style="display:flex;gap:30px;align-items:center;font-size:15px;color:#3b3c34;">
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Essays</a>
+          <a href="#" style="color:var(--accent,#2C4636);text-decoration:none;font-weight:600;">Series</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Topics</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Notes</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Start Here</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">About</a>
+        </nav>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="color:#3b3c34;"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><line x1="12.2" y1="12.2" x2="16" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:14px;font-weight:600;padding:9px 18px;border-radius:2px;" style-hover="background:#1f3527;">Join</a>
+        </div>
+      </header>
+
+      <!-- Series hero -->
+      <section style="padding:80px 64px 64px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;">
+        <div>
+          <div style="display:flex;gap:8px;margin-bottom:22px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:6px 13px;border-radius:100px;">Series</span><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4d5043;border:1px solid #d6d1c0;padding:6px 13px;border-radius:100px;">Love &amp; Relationships</span></div>
+          <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:74px;line-height:1.02;letter-spacing:-.01em;margin:0 0 24px;color:#222420;">Unrequited Love</h1>
+          <p style="font-size:21px;line-height:1.55;color:#54564b;margin:0 0 22px;max-width:44ch;font-style:italic;font-family:'Newsreader',serif;">The things we do when we hope someone will choose us.</p>
+          <p style="font-size:18px;line-height:1.65;color:#5a5c51;margin:0 0 32px;max-width:48ch;">A story-led essay series about attachment, rejection, mixed signals, boundaries, and learning not to beg to be chosen.</p>
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:34px;flex-wrap:wrap;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4d5043;border:1px solid #d6d1c0;padding:6px 13px;border-radius:100px;">6 essays</span><span style="display:inline-flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent,#2C4636);background:#DCE2D0;padding:6px 13px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--sage,#8FA189);"></span>Ongoing</span><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4d5043;border:1px solid #d6d1c0;padding:6px 13px;border-radius:100px;">3 published</span></div>
+          <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:16px;font-weight:600;padding:14px 26px;border-radius:2px;" style-hover="background:#1f3527;">Start with Essay One</a>
+        </div>
+        <div style="aspect-ratio:3/4;background:repeating-linear-gradient(135deg,#ECE8DB 0 12px,#F2EFE4 12px 24px);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#9A9C8B;">series cover</span>
+        </div>
+      </section>
+
+      <!-- Reading order -->
+      <section style="padding:32px 64px 72px;max-width:1180px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:.55fr 1.45fr;gap:56px;">
+          <div>
+            <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;margin:0 0 12px;color:#222420;">Reading order</h2>
+            <p style="font-size:15px;line-height:1.6;color:#6B6D62;margin:0;max-width:26ch;">Best read in sequence, but each can stand alone.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.65;"><span style="font-family:'Newsreader',serif;font-size:26px;color:var(--sage,#8FA189);min-width:46px;">01</span><span style="flex:1;font-size:20px;color:#222420;">The Person Who Loved Harder</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#5f6253;background:#E6E3D6;padding:5px 11px;border-radius:100px;white-space:nowrap;">Published</span></a>
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.65;"><span style="font-family:'Newsreader',serif;font-size:26px;color:var(--sage,#8FA189);min-width:46px;">02</span><span style="flex:1;font-size:20px;color:#222420;">Why Rejection Can Feel Like a Verdict on Your Worth</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#5f6253;background:#E6E3D6;padding:5px 11px;border-radius:100px;white-space:nowrap;">Published</span></a>
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid var(--accent,#2C4636);border-bottom:1px solid var(--accent,#2C4636);text-decoration:none;background:#EEF0E6;margin:-1px 0;" style-hover="opacity:.9;"><span style="font-family:'Newsreader',serif;font-size:26px;color:var(--accent,#2C4636);min-width:46px;">03</span><span style="flex:1;font-size:20px;color:#222420;font-weight:600;">The Comfort of Almost</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#F4F1E8;background:var(--accent,#2C4636);padding:5px 11px;border-radius:100px;white-space:nowrap;">You are here</span></a>
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.65;"><span style="font-family:'Newsreader',serif;font-size:26px;color:#c7c3b3;min-width:46px;">04</span><span style="flex:1;font-size:20px;color:#9a9c8e;">Loving Someone Who Only Loves What You Give Them</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#a9a795;border:1px solid #d6d1c0;padding:5px 11px;border-radius:100px;white-space:nowrap;">Upcoming</span></a>
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.65;"><span style="font-family:'Newsreader',serif;font-size:26px;color:#c7c3b3;min-width:46px;">05</span><span style="flex:1;font-size:20px;color:#9a9c8e;">How to Leave Without Waiting for Closure</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#a9a795;border:1px solid #d6d1c0;padding:5px 11px;border-radius:100px;white-space:nowrap;">Upcoming</span></a>
+            <a href="#" style="display:flex;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E2DECF;border-bottom:1px solid #E2DECF;text-decoration:none;" style-hover="opacity:.65;"><span style="font-family:'Newsreader',serif;font-size:26px;color:#c7c3b3;min-width:46px;">06</span><span style="flex:1;font-size:20px;color:#9a9c8e;">What Healthy Love Feels Like After You Stop Begging</span><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#a9a795;border:1px solid #d6d1c0;padding:5px 11px;border-radius:100px;white-space:nowrap;">Upcoming</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Theme -->
+      <section style="background:#E8EADD;padding:72px 64px;">
+        <div style="max-width:760px;margin:0 auto;text-align:center;">
+          <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent,#2C4636);margin-bottom:20px;">What this explores</div>
+          <p style="font-family:'Newsreader',serif;font-size:32px;line-height:1.35;color:#2c3a30;margin:0;">This series sits with the gap between wanting and being wanted &mdash; the psychology of attachment, the stories we tell ourselves about almost, and the slow work of no longer auditioning for a place in someone&rsquo;s life.</p>
+        </div>
+      </section>
+
+      <!-- Related series -->
+      <section style="padding:72px 64px;max-width:1180px;margin:0 auto;">
+        <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:30px;margin:0 0 32px;color:#222420;">Related series</h2>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+          <a href="#" style="text-decoration:none;display:flex;flex-direction:column;" style-hover="opacity:.78;"><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;margin-bottom:18px;"></div><div style="margin-bottom:10px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Complete · 5 essays</span></div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.12;margin:0;color:#222420;">The Year You Rebuilt Yourself</h3></a>
+          <a href="#" style="text-decoration:none;display:flex;flex-direction:column;" style-hover="opacity:.78;"><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;margin-bottom:18px;"></div><div style="margin-bottom:10px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Ongoing · 4 essays</span></div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.12;margin:0;color:#222420;">On Feeling Behind</h3></a>
+          <a href="#" style="text-decoration:none;display:flex;flex-direction:column;" style-hover="opacity:.78;"><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ECE8DB 0 11px,#F2EFE4 11px 22px);border-radius:2px;margin-bottom:18px;"></div><div style="margin-bottom:10px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">New · 2 essays</span></div><h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:24px;line-height:1.12;margin:0;color:#222420;">The Friendships That Quietly End</h3></a>
+        </div>
+      </section>
+
+      <footer style="border-top:1px solid #c7c2b0;padding:44px 64px;text-align:center;">
+        <div style="font-family:'Newsreader',serif;font-size:24px;color:#1f211c;margin-bottom:8px;">Know What I&rsquo;m Saying?</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;">© 2026 · A reading publication · Made for slow afternoons</div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ============================ DESKTOP: TOPICS ============================ -->
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8c7e;">Desktop · Topics</div>
+    <div data-screen-label="Topics (desktop)" style="width:1440px;background-color:#F4F1E8;border-radius:3px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 64px;border-bottom:1px solid #ECE7D8;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#9a9c8e;">
+        <span>A reading publication · est. 2026</span>
+        <span style="color:var(--accent,#2C4636);">Issue №14 · June 2026</span>
+      </div>
+      <header style="display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid #E2DECF;">
+        <div style="display:flex;align-items:center;gap:11px;"><span style="display:flex;color:var(--accent,#2C4636);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:24px;color:#222420;">Know What I&rsquo;m Saying?</span></div>
+        <nav style="display:flex;gap:30px;align-items:center;font-size:15px;color:#3b3c34;">
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Essays</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Series</a>
+          <a href="#" style="color:var(--accent,#2C4636);text-decoration:none;font-weight:600;">Topics</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Notes</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">Start Here</a>
+          <a href="#" style="color:#3b3c34;text-decoration:none;" style-hover="color:var(--accent,#2C4636);">About</a>
+        </nav>
+        <div style="display:flex;gap:18px;align-items:center;">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="color:#3b3c34;"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><line x1="12.2" y1="12.2" x2="16" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <a href="#" style="background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:14px;font-weight:600;padding:9px 18px;border-radius:2px;" style-hover="background:#1f3527;">Join</a>
+        </div>
+      </header>
+
+      <section style="padding:78px 64px 46px;max-width:1180px;margin:0 auto;text-align:center;">
+        <div style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:7px 14px;border-radius:100px;margin-bottom:24px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--sage,#8FA189);"></span>The Index</div>
+        <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:76px;line-height:1.0;letter-spacing:-.015em;margin:0 0 18px;color:#1f211c;">Topics</h1>
+        <p style="font-family:'Newsreader',serif;font-style:italic;font-size:23px;line-height:1.4;color:#6B6D62;max-width:40ch;margin:0 auto;">Start with the question you are carrying.</p>
+      </section>
+
+      <section style="padding:0 64px 92px;max-width:1180px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#EFE4E2;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B07A72" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.49 4.04 3 5.5l7 7Z"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Love &amp; Relationships</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Attachment, heartbreak, intimacy, boundaries, and what it means to be chosen.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">24 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#EEE8DA;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8894F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Psychology &amp; Behavior</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Why we do what we do &mdash; the quiet mechanics of the human mind.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">19 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#E5E8EE;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7E8CA3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Culture &amp; Technology</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Attention, identity, and living inside systems built to distract us.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">16 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#DCE2D0;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2C4636" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Money, Work &amp; Ambition</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Timing, comparison, meaning, and the milestones nobody agreed to.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">13 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#E0EAE6;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6F9A95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Life &amp; Meaning</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">The big quiet questions about how to spend a life that&rsquo;s yours.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">21 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#E5EADD;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FA189" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Healing &amp; Boundaries</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Repair, self-trust, and learning to protect your own quiet.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">11 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#ECE5EB;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9A8299" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Friendship</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">The bonds that hold us &mdash; and the ones that quietly fade.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">9 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#F0E6DE;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#BC8466" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Modern Dating</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Apps, ambiguity, and looking for something real in a noisy world.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">14 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+          <a href="#" style="position:relative;text-decoration:none;border:1px solid #ddd8c8;border-radius:4px;padding:30px 28px 26px;display:flex;flex-direction:column;gap:14px;min-height:206px;background:#FBF9F2;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;" style-hover="border-color:var(--accent,#2C4636);transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,38,28,.07);">
+            <div style="width:46px;height:46px;border-radius:50%;background:#E2E8DC;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A6A52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6"/></svg></div>
+            <h3 style="font-family:'Newsreader',serif;font-weight:500;font-size:25px;line-height:1.1;margin:0;color:#1f211c;">Family</h3>
+            <p style="font-size:15px;line-height:1.55;color:#6B6D62;margin:0;flex:1;">Inheritance, obligation, and the people who shaped how you love.</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="display:inline-flex;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#5f6253;background:#EAE7DA;padding:5px 11px;border-radius:100px;">8 essays</span>
+              <span style="font-family:'Space Mono',monospace;font-size:15px;color:#bdbaa9;">&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer style="border-top:1px solid #c7c2b0;padding:44px 64px;text-align:center;">
+        <div style="font-family:'Newsreader',serif;font-size:24px;color:#1f211c;margin-bottom:8px;">Know What I&rsquo;m Saying?</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a9c8e;">© 2026 · A reading publication · Made for slow afternoons</div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ============================ MOBILE FRAMES ============================ -->
+  <div style="display:flex;flex-direction:column;gap:14px;">
+    <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8c7e;">Mobile · Homepage, Article, Menu</div>
+    <div style="display:flex;gap:40px;align-items:flex-start;">
+
+      <!-- Mobile: Home -->
+      <div data-screen-label="Homepage (mobile)" style="width:390px;background-color:#F4F1E8;border-radius:18px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+        <header style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #E2DECF;">
+          <div style="display:flex;align-items:center;gap:9px;"><span style="display:flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:18px;color:#222420;">Know What I&rsquo;m Saying?</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px;"><span style="width:20px;height:1.6px;background:#3b3c34;"></span><span style="width:20px;height:1.6px;background:#3b3c34;"></span><span style="width:20px;height:1.6px;background:#3b3c34;"></span></div>
+        </header>
+        <section style="padding:40px 22px 32px;text-align:center;">
+          <div style="display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:6px 12px;border-radius:100px;margin-bottom:18px;"><span style="width:5px;height:5px;border-radius:50%;background:var(--sage,#8FA189);"></span>A reading publication</div>
+          <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:42px;line-height:1.05;margin:0 0 18px;color:#222420;">Thoughtful writing for modern life.</h1>
+          <p style="font-size:17px;line-height:1.55;color:#54564b;margin:0 0 24px;">Essays on psychology, love, money, technology, and the stories people carry.</p>
+          <a href="#" style="display:block;text-align:center;background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:15px;font-weight:600;padding:14px;border-radius:2px;margin-bottom:12px;">Read the latest essay</a>
+          <a href="#" style="display:block;text-align:center;border:1px solid #cfcab8;color:#222420;text-decoration:none;font-size:15px;font-weight:600;padding:13px;border-radius:2px;">Start here</a>
+        </section>
+        <section style="padding:8px 22px 36px;">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#ECE8DB 0 10px,#F2EFE4 10px 20px);border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><span style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9A9C8B;">featured image</span></div>
+          <div style="margin-bottom:10px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Love &amp; Relationships</span></div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:32px;line-height:1.08;margin:0 0 12px;color:#222420;">The Comfort of Almost</h2>
+          <p style="font-size:16px;line-height:1.55;color:#6B6D62;margin:0 0 14px;">Why ambiguous connections keep people attached far longer than they expect.</p>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;color:#9a9c8e;text-transform:uppercase;">June 23 · 8 min</div>
+        </section>
+        <section style="background:#E8EADD;padding:32px 22px;">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent,#2C4636);margin-bottom:12px;">Featured series</div>
+          <h2 style="font-family:'Newsreader',serif;font-weight:500;font-size:30px;line-height:1.05;margin:0 0 12px;color:#222420;">Unrequited Love</h2>
+          <p style="font-size:15px;line-height:1.55;color:#4d5043;margin:0 0 16px;">The things we do when we hope someone will choose us. 3 of 6 published.</p>
+          <a href="#" style="display:inline-block;background:var(--accent,#2C4636);color:#F4F1E8;text-decoration:none;font-size:14px;font-weight:600;padding:11px 20px;border-radius:2px;">Begin the series</a>
+        </section>
+        <footer style="padding:28px 22px;text-align:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;color:#9a9c8e;">© 2026 Know What I&rsquo;m Saying?</footer>
+      </div>
+
+      <!-- Mobile: Article -->
+      <div data-screen-label="Article (mobile)" style="width:390px;background-color:#F4F1E8;border-radius:18px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#222420;">
+        <header style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #E2DECF;">
+          <div style="display:flex;align-items:center;gap:9px;"><span style="display:flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent,#2C4636)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:18px;color:#222420;">Know What I&rsquo;m Saying?</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px;"><span style="width:20px;height:1.6px;background:#3b3c34;"></span><span style="width:20px;height:1.6px;background:#3b3c34;"></span><span style="width:20px;height:1.6px;background:#3b3c34;"></span></div>
+        </header>
+        <div style="height:3px;background:#E2DECF;"><div style="height:3px;width:46%;background:var(--accent,#2C4636);"></div></div>
+        <article style="padding:34px 24px 0;">
+          <div style="margin-bottom:16px;"><span style="display:inline-flex;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#2C4636);background:#E3E7D8;padding:5px 11px;border-radius:100px;">Unrequited Love · Essay 3 of 6</span></div>
+          <h1 style="font-family:'Newsreader',serif;font-weight:500;font-size:40px;line-height:1.05;margin:0 0 16px;color:#222420;">The Comfort of Almost</h1>
+          <p style="font-family:'Newsreader',serif;font-style:italic;font-size:19px;line-height:1.45;color:#54564b;margin:0 0 18px;">Why ambiguous connections can keep people emotionally attached far longer than they expect.</p>
+          <div style="display:flex;gap:12px;align-items:center;font-family:'Space Mono',monospace;font-size:11px;color:#86887a;text-transform:uppercase;padding-bottom:24px;border-bottom:1px solid #E2DECF;"><span>June 23</span><span style="color:#cdc9b9;">·</span><span>8 min</span><span style="color:#cdc9b9;">·</span><span style="color:var(--accent,#2C4636);">Share</span></div>
+        </article>
+        <div style="padding:14px 24px 0;">
+          <div style="background:#E8EADD;border-radius:3px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:13px;color:#5f6253;font-weight:600;">Essay 3 of 6</span>
+            <span style="font-size:12px;color:var(--accent,#2C4636);font-weight:600;">&larr; Prev · Next &rarr;</span>
+          </div>
+        </div>
+        <article style="padding:28px 24px 32px;font-size:17px;line-height:1.75;color:#2c2e26;">
+          <p style="margin:0 0 22px;">There is a particular kind of relationship that never quite becomes one. It lives in the space between a held glance and a sent text &mdash; the warmth of someone&rsquo;s attention without the weight of their commitment.</p>
+          <blockquote style="margin:28px 0;padding:0 0 0 20px;border-left:3px solid var(--sage,#8FA189);font-family:'Newsreader',serif;font-size:24px;line-height:1.3;color:#2c3a30;">We stay for who they occasionally let us believe they might become.</blockquote>
+          <p style="margin:0 0 22px;">A clear rejection ends something. Ambiguity keeps the door propped open just enough to keep you standing in the hallway.</p>
+        </article>
+        <footer style="padding:28px 24px;text-align:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;color:#9a9c8e;border-top:1px solid #E2DECF;">© 2026 Know What I&rsquo;m Saying?</footer>
+      </div>
+
+      <!-- Mobile: Menu -->
+      <div data-screen-label="Menu (mobile)" style="width:390px;background:var(--accent,#2C4636);border-radius:18px;box-shadow:0 1px 3px rgba(40,38,28,.10),0 18px 50px rgba(40,38,28,.07);overflow:hidden;font-family:'Hanken Grotesk',sans-serif;color:#EDEFE3;min-height:760px;display:flex;flex-direction:column;">
+        <header style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.12);">
+          <div style="display:flex;align-items:center;gap:9px;"><span style="display:flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EDEFE3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></svg></span><span style="font-family:'Newsreader',serif;font-size:18px;color:#EDEFE3;">Know What I&rsquo;m Saying?</span></div>
+          <div style="position:relative;width:20px;height:20px;"><span style="position:absolute;top:9px;left:0;width:20px;height:1.6px;background:#EDEFE3;transform:rotate(45deg);"></span><span style="position:absolute;top:9px;left:0;width:20px;height:1.6px;background:#EDEFE3;transform:rotate(-45deg);"></span></div>
+        </header>
+        <nav style="padding:32px 24px;display:flex;flex-direction:column;">
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">Essays</a>
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">Series</a>
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">Topics</a>
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">Notes</a>
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">Start Here</a>
+          <a href="#" style="font-family:'Newsreader',serif;font-size:34px;color:#EDEFE3;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);">About</a>
+        </nav>
+        <div style="margin-top:auto;padding:24px;display:flex;flex-direction:column;gap:12px;">
+          <a href="#" style="display:block;text-align:center;background:#EDEFE3;color:var(--accent,#2C4636);text-decoration:none;font-size:15px;font-weight:600;padding:14px;border-radius:2px;">Join the newsletter</a>
+          <a href="#" style="display:block;text-align:center;border:1px solid rgba(255,255,255,.3);color:#EDEFE3;text-decoration:none;font-size:15px;font-weight:600;padding:13px;border-radius:2px;">WhatsApp Channel</a>
+          <div style="text-align:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;color:#9fb09a;margin-top:6px;">Search · Share your story</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1560,&quot;height&quot;:1000},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2C4636&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;sage&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#8FA189&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#2C4636';
+    const sage = this.props.sage ?? '#8FA189';
+    const rootStyle = {
+      '--accent': accent,
+      '--sage': sage,
+      minWidth: '100%',
+      minHeight: '100vh',
+      width: 'max-content',
+      boxSizing: 'border-box',
+      padding: '56px',
+      background: '#DEDBCF',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '64px',
+    };
+    return { rootStyle };
+  }
+}
+</script>
+</body>
+</html>
