@@ -55,6 +55,9 @@ export const seriesFrontmatterSchema = z.object({
   totalPlanned: z.number().int().positive(),
   topics: z.array(z.string()).default([]),
   relatedSeries: z.array(z.string()).default([]),
+  plannedInstallments: z
+    .array(z.object({ installment: z.number().int().positive(), title: z.string() }))
+    .default([]),
 });
 
 export const productFrontmatterSchema = z.object({
