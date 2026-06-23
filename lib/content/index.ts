@@ -7,3 +7,4 @@ export * from "@/lib/content/series";
 export * from "@/lib/content/topics";
 export * from "@/lib/content/products";
 export * from "@/lib/content/pages";
+export * from "@/lib/content/reading-list";

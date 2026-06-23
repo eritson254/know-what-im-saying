@@ -78,8 +78,21 @@ export const pageFrontmatterSchema = z.object({
   updated: z.string().nullable().default(null),
 });
 
+export const readingListFrontmatterSchema = z.object({
+  title: z.string(),
+  slug: z.string(),
+  creator: z.string().nullable().default(null),
+  medium: z.enum(["book", "article", "essay", "podcast", "film"]),
+  blurb: z.string(),
+  externalUrl: z.string(),
+  topics: z.array(z.string()).default([]),
+  dateAdded: z.string(),
+  featured: z.boolean().default(false),
+});
+
 export type EssayFrontmatter = z.infer<typeof essayFrontmatterSchema>;
 export type NoteFrontmatter = z.infer<typeof noteFrontmatterSchema>;
 export type SeriesFrontmatter = z.infer<typeof seriesFrontmatterSchema>;
 export type ProductFrontmatter = z.infer<typeof productFrontmatterSchema>;
 export type PageFrontmatter = z.infer<typeof pageFrontmatterSchema>;
+export type ReadingListFrontmatter = z.infer<typeof readingListFrontmatterSchema>;
