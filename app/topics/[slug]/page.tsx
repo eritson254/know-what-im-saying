@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { TopicIcon } from "@/components/topics/topic-icon";
 import { ArticleRow } from "@/components/articles/article-row";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { PagefindMeta } from "@/components/seo/pagefind-meta";
 import { getEssaysByTopic } from "@/lib/content/essays";
 import { topics, getTopicBySlug } from "@/lib/content/topics";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -48,6 +49,7 @@ export default async function TopicDetailPage({
         ]}
       />
       <Header />
+      <PagefindMeta type="Topic" />
       <section className="mx-auto w-full max-w-[1180px] px-6 py-16 text-center md:px-16 md:py-20">
         <div
           className="mx-auto mb-6 flex h-[56px] w-[56px] items-center justify-center rounded-full"

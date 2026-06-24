@@ -32,7 +32,10 @@ function FooterColumn({
 
 export function Footer() {
   return (
-    <footer className="bg-accent px-6 py-12 text-accent-foreground md:px-16 md:py-[60px] md:pb-[46px]">
+    <footer
+      data-pagefind-ignore
+      className="bg-accent px-6 py-12 text-accent-foreground md:px-16 md:py-[60px] md:pb-[46px]"
+    >
       <div className="mx-auto grid max-w-[1240px] gap-12 text-center md:grid-cols-[1.6fr_1fr_1fr_1fr] md:gap-12 md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <div className="mb-3 font-serif text-[30px]">

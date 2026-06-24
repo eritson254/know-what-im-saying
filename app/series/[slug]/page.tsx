@@ -8,6 +8,7 @@ import { SeriesThemeBand } from "@/components/series/series-theme-band";
 import { RelatedSeriesGrid } from "@/components/series/related-series-grid";
 import { ReaderStoryCta } from "@/components/marketing/reader-story-cta";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { PagefindMeta } from "@/components/seo/pagefind-meta";
 import {
   getAllSeries,
   getSeriesBySlug,
@@ -97,6 +98,7 @@ export default async function SeriesPage({
         ]}
       />
       <Header />
+      <PagefindMeta type="Series" />
       <SeriesHero
         series={series}
         publishedCount={installments.length}

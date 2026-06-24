@@ -5,6 +5,7 @@ import { Pill } from "@/components/ui/pill";
 import { MdxContent } from "@/components/articles/mdx-content";
 import { ArticleJsonLd } from "@/components/seo/article-json-ld";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { PagefindMeta } from "@/components/seo/pagefind-meta";
 import { getAllNotes, getNoteBySlug } from "@/lib/content/notes";
 import { getTopicBySlug } from "@/lib/content/topics";
 import { formatDisplayDate } from "@/lib/utils/format-date";
@@ -62,6 +63,12 @@ export default async function NotePage({
         ]}
       />
       <Header />
+      <PagefindMeta
+        type="Note"
+        topic={topic?.label}
+        date={note.frontmatter.date}
+        readingTime={note.readingTime}
+      />
       <article className="mx-auto max-w-[720px] px-6 pt-16 md:pt-[72px]">
         <div className="mb-6 flex justify-center">
           {topic && <Pill>{topic.label}</Pill>}

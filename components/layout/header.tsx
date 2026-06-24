@@ -78,7 +78,7 @@ function DesktopNav() {
 
 function StandardHeader() {
   return (
-    <div className="hidden md:block">
+    <div data-pagefind-ignore className="hidden md:block">
       <UtilityBar right={<span className="text-accent-text">Issue №14 · June 2026</span>} />
       <header className="flex items-center justify-between border-b border-border px-16 py-5">
         <Link href="/" className="flex items-center gap-[11px] no-underline">
@@ -89,7 +89,9 @@ function StandardHeader() {
         </Link>
         <DesktopNav />
         <div className="flex items-center gap-[18px]">
-          <Search size={18} strokeWidth={1.4} className="text-ink" />
+          <Link href="/search" aria-label="Search" className="flex text-ink hover:text-accent-text">
+            <Search size={18} strokeWidth={1.4} />
+          </Link>
           <ThemeToggle />
           <Link
             href="/newsletter"
@@ -105,7 +107,7 @@ function StandardHeader() {
 
 function MastheadHeader() {
   return (
-    <div className="hidden md:block">
+    <div data-pagefind-ignore className="hidden md:block">
       <UtilityBar
         right={
           <span className="flex items-center gap-5 text-muted-4">
@@ -175,7 +177,7 @@ export function Header({
 
   return (
     <>
-      <div ref={stickyRef} className="sticky top-0 z-40 md:hidden">
+      <div data-pagefind-ignore ref={stickyRef} className="sticky top-0 z-40 md:hidden">
         <MobileBar onMenuOpen={() => setIsMenuOpen(true)} collapsed={collapsed} />
         <button
           type="button"

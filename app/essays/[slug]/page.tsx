@@ -16,6 +16,7 @@ import {
 import { StoryPrompt } from "@/components/articles/story-prompt";
 import { ArticleJsonLd } from "@/components/seo/article-json-ld";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { PagefindMeta } from "@/components/seo/pagefind-meta";
 import { getAllEssays, getEssayBySlug, getRelatedEssays } from "@/lib/content/essays";
 import { getSeriesInstallments } from "@/lib/content/series";
 import { getTopicBySlug } from "@/lib/content/topics";
@@ -51,6 +52,7 @@ export default async function EssayPage({
   const essay = getEssayBySlug(slug);
   if (!essay) notFound();
 
+  const topic = getTopicBySlug(essay.frontmatter.topic);
   const series = essay.frontmatter.series;
   const installments = series ? getSeriesInstallments(series.slug) : [];
   const currentIndex = installments.findIndex((item) => item.slug === essay.slug);
@@ -115,6 +117,13 @@ export default async function EssayPage({
         ]}
       />
       <Header />
+      <PagefindMeta
+        type="Essay"
+        topic={topic?.label}
+        date={essay.frontmatter.date}
+        readingTime={essay.readingTime}
+        series={series?.title.split(":")[0]}
+      />
       <ReadingProgressBar />
 
       <ArticleHeader frontmatter={essay.frontmatter} readingTime={essay.readingTime} />

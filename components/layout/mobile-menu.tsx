@@ -11,6 +11,7 @@ export function MobileMenu({
 }) {
   return (
     <div
+      data-pagefind-ignore
       className={`fixed inset-0 z-50 flex flex-col bg-accent text-accent-foreground transition-transform duration-200 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}

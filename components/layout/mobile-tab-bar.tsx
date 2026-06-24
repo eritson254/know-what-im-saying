@@ -26,7 +26,10 @@ export function MobileTabBar() {
 
   return (
     <>
-      <div className="fixed inset-x-0 bottom-0 z-40 flex flex-col items-center md:hidden">
+      <div
+        data-pagefind-ignore
+        className="fixed inset-x-0 bottom-0 z-40 flex flex-col items-center md:hidden"
+      >
         <button
           type="button"
           onClick={() => setCollapsed((value) => !value)}
