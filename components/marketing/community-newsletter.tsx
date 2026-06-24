@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MessageCircle, Mail } from "lucide-react";
+import { NewsletterForm } from "@/components/marketing/newsletter-form";
 
 export function CommunityNewsletter() {
   return (
@@ -38,19 +39,7 @@ export function CommunityNewsletter() {
         <p className="mb-[26px] max-w-[34ch] text-[16px] leading-[1.6] text-muted-2">
           New essays, notes, and ideas worth sitting with.
         </p>
-        <form className="mt-auto flex flex-col gap-[10px] sm:flex-row">
-          <input
-            type="email"
-            placeholder="you@email.com"
-            className="min-w-0 flex-1 rounded-[2px] border border-border-card bg-white px-[14px] py-3 font-sans text-[15px] text-ink outline-none"
-          />
-          <button
-            type="submit"
-            className="rounded-[2px] bg-accent px-[22px] py-3 font-sans text-[15px] font-semibold text-accent-foreground hover:bg-accent-hover"
-          >
-            Subscribe
-          </button>
-        </form>
+        <NewsletterForm className="mt-auto" />
       </div>
     </section>
   );

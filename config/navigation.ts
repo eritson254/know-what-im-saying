@@ -9,6 +9,7 @@ export const primaryNav: NavLink[] = [
   { label: "Topics", href: "/topics" },
   { label: "Notes", href: "/notes" },
   { label: "Start Here", href: "/start-here" },
+  { label: "Community", href: "/community" },
   { label: "About", href: "/about" },
 ];
 
@@ -19,6 +20,7 @@ export const mobileNav: NavLink[] = [
   { label: "Reading List", href: "/reading-list" },
   { label: "Notes", href: "/notes" },
   { label: "Start Here", href: "/start-here" },
+  { label: "Community", href: "/community" },
   { label: "About", href: "/about" },
 ];
 
