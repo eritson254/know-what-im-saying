@@ -42,5 +42,6 @@ export const footerLegalLinks: NavLink[] = [
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
   { label: "Editorial Policy", href: "/editorial-policy" },
+  { label: "Disclosures", href: "/disclosures" },
   { label: "Contact", href: "/contact" },
 ];
