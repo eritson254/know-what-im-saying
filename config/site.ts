@@ -3,4 +3,5 @@ export const siteConfig = {
   tagline: "Thoughtful writing for people trying to make sense of modern life.",
   url: "https://knowwhatimsaying.com",
   whatsappChannelUrl: "#",
+  shareYourStoryFormUrl: "#",
 };
