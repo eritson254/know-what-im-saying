@@ -31,5 +31,8 @@ export function buildPageMetadata({
       url: buildCanonicalUrl(pathname, canonicalUrl),
       siteName: siteConfig.name,
     },
+    twitter: {
+      card: "summary_large_image",
+    },
   };
 }

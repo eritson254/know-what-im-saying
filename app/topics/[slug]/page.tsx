@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { TopicIcon } from "@/components/topics/topic-icon";
 import { ArticleRow } from "@/components/articles/article-row";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { getEssaysByTopic } from "@/lib/content/essays";
 import { topics, getTopicBySlug } from "@/lib/content/topics";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -40,6 +41,12 @@ export default async function TopicDetailPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Topics", path: "/topics" },
+          { name: topic.label, path: `/topics/${topic.slug}` },
+        ]}
+      />
       <Header />
       <section className="mx-auto w-full max-w-[1180px] px-6 py-16 text-center md:px-16 md:py-20">
         <div

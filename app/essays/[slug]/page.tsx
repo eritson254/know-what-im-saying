@@ -14,10 +14,12 @@ import {
   type RelatedReadingItem,
 } from "@/components/articles/related-reading-band";
 import { StoryPrompt } from "@/components/articles/story-prompt";
+import { ArticleJsonLd } from "@/components/seo/article-json-ld";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { getAllEssays, getEssayBySlug, getRelatedEssays } from "@/lib/content/essays";
 import { getSeriesInstallments } from "@/lib/content/series";
 import { getTopicBySlug } from "@/lib/content/topics";
-import { buildPageMetadata } from "@/lib/seo/metadata";
+import { buildPageMetadata, buildCanonicalUrl } from "@/lib/seo/metadata";
 
 export function generateStaticParams() {
   return getAllEssays().map((essay) => ({ slug: essay.slug }));
@@ -95,6 +97,23 @@ export default async function EssayPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <ArticleJsonLd
+        title={essay.frontmatter.title}
+        description={essay.frontmatter.description}
+        datePublished={essay.frontmatter.date}
+        dateModified={essay.frontmatter.updated}
+        imagePath={`/essays/${essay.slug}/opengraph-image`}
+        canonicalUrl={buildCanonicalUrl(
+          `/essays/${essay.slug}`,
+          essay.frontmatter.canonicalUrl,
+        )}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Essays", path: "/essays" },
+          { name: essay.frontmatter.title, path: `/essays/${essay.slug}` },
+        ]}
+      />
       <Header />
       <ReadingProgressBar />
 

@@ -3,6 +3,7 @@ import { Newsreader, Inter, Space_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
 import { ThemeScript } from "@/components/theme/theme-script";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -25,12 +26,16 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: "Know What I'm Saying?",
   description: "Thoughtful writing for people trying to make sense of modern life.",
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
     },
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

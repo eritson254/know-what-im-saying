@@ -7,6 +7,7 @@ import { SeriesReadProgressSummary } from "@/components/series/series-read-progr
 import { SeriesThemeBand } from "@/components/series/series-theme-band";
 import { RelatedSeriesGrid } from "@/components/series/related-series-grid";
 import { ReaderStoryCta } from "@/components/marketing/reader-story-cta";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import {
   getAllSeries,
   getSeriesBySlug,
@@ -86,6 +87,15 @@ export default async function SeriesPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Series", path: "/series" },
+          {
+            name: series.frontmatter.title.split(":")[0],
+            path: `/series/${series.slug}`,
+          },
+        ]}
+      />
       <Header />
       <SeriesHero
         series={series}

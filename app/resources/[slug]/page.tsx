@@ -8,6 +8,7 @@ import {
   RelatedReadingBand,
   type RelatedReadingItem,
 } from "@/components/articles/related-reading-band";
+import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import {
   getAllProducts,
   getProductBySlug,
@@ -92,6 +93,12 @@ export default async function ProductPage({
 
   return (
     <main className="flex flex-1 flex-col">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Resources", path: "/resources" },
+          { name: product.frontmatter.title, path: `/resources/${product.slug}` },
+        ]}
+      />
       <Header />
 
       <section className="mx-auto w-full max-w-[1100px] px-6 pt-14 pb-16 md:px-16 md:pt-20">
