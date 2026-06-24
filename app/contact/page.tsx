@@ -39,7 +39,7 @@ export default function ContactPage() {
             For partnerships, press, or anything related to a future product,
             email us directly and mention what you have in mind.
           </p>
-          <p className="text-[14px] leading-[1.6] text-muted-4">
+          <p className="text-[14px] leading-[1.6] text-muted-3">
             This is not a crisis, legal, medical, or therapy service. If you
             are in immediate danger, please contact your local emergency or
             crisis services.

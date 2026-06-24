@@ -53,7 +53,7 @@ function MobileBar({
 
 function UtilityBar({ right }: { right: React.ReactNode }) {
   return (
-    <div className="hidden items-center justify-between border-b border-border-soft px-16 py-[11px] font-mono text-[10px] tracking-[.13em] text-muted-4 uppercase md:flex">
+    <div className="hidden items-center justify-between border-b border-border-soft px-16 py-[11px] font-mono text-[10px] tracking-[.13em] text-muted-3 uppercase md:flex">
       <span>A reading publication · est. 2026</span>
       {right}
     </div>
@@ -110,7 +110,7 @@ function MastheadHeader() {
     <div data-pagefind-ignore className="hidden md:block">
       <UtilityBar
         right={
-          <span className="flex items-center gap-5 text-muted-4">
+          <span className="flex items-center gap-5 text-muted-3">
             <Link href="/search" className="no-underline hover:text-accent-text">
               Search
             </Link>

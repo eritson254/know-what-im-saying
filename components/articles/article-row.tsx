@@ -32,7 +32,7 @@ export function ArticleRow({
         <p className="mb-[14px] max-w-[52ch] text-[16px] leading-[1.55] text-muted-2">
           {essay.frontmatter.description}
         </p>
-        <div className="font-mono text-[11px] tracking-[.06em] text-muted-4 uppercase">
+        <div className="font-mono text-[11px] tracking-[.06em] text-muted-3 uppercase">
           {formatShortDate(essay.frontmatter.date)} · {readingTime} min read
         </div>
       </div>

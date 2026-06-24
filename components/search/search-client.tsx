@@ -102,7 +102,7 @@ export function SearchClient() {
           value={query}
           onChange={(event) => updateQuery(event.target.value)}
           placeholder="Search essays, series, notes, and topics"
-          className="w-full bg-transparent text-[17px] text-ink outline-none placeholder:text-muted-3"
+          className="w-full bg-transparent text-[17px] text-ink placeholder:text-muted-3"
           autoFocus
         />
       </div>

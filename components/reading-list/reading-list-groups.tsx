@@ -30,7 +30,7 @@ export function ReadingListGroups({ items }: { items: ReadingListEntry[] }) {
 
         return (
           <div key={medium} className="mb-14">
-            <h2 className="mb-2 font-mono text-[12px] tracking-[.14em] text-muted-4 uppercase">
+            <h2 className="mb-2 font-mono text-[12px] tracking-[.14em] text-muted-3 uppercase">
               {label}
             </h2>
             <div className="flex flex-col">

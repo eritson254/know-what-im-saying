@@ -23,7 +23,7 @@ const STATE_BADGE_CLASSES: Record<ReadState, string> = {
   unread: "bg-chip-neutral text-muted-1",
   "reading-now": "bg-accent text-accent-foreground",
   read: "bg-sage text-accent-foreground",
-  upcoming: "border border-border-card text-muted-4",
+  upcoming: "border border-border-card text-muted-3",
 };
 
 export function ReadingOrder({
@@ -65,14 +65,14 @@ export function ReadingOrder({
               >
                 <span
                   className={`min-w-[46px] font-serif text-[26px] ${
-                    isPublished ? "text-sage" : "text-muted-4"
+                    isPublished ? "text-sage" : "text-muted-3"
                   }`}
                 >
                   {String(entry.installment).padStart(2, "0")}
                 </span>
                 <span
                   className={`flex-1 text-[20px] ${
-                    isPublished ? "text-ink" : "text-muted-4"
+                    isPublished ? "text-ink" : "text-muted-3"
                   }`}
                 >
                   {entry.title}

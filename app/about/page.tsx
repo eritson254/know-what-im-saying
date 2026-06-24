@@ -30,7 +30,7 @@ export default function AboutPage() {
       />
 
       <section className="mx-auto w-full max-w-[1100px] px-6 pb-6 md:px-16">
-        <h2 className="mb-2 text-center font-mono text-[12px] tracking-[.14em] text-muted-4 uppercase">
+        <h2 className="mb-2 text-center font-mono text-[12px] tracking-[.14em] text-muted-3 uppercase">
           What this publication writes about
         </h2>
         <p className="mx-auto mb-10 max-w-[56ch] text-center text-[15px] leading-[1.6] text-muted-2">

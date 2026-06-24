@@ -26,7 +26,7 @@ export function ReadingListRow({
           {title}
         </h3>
         {creator && (
-          <div className="mb-[8px] font-mono text-[11px] tracking-[.06em] text-muted-4 uppercase">
+          <div className="mb-[8px] font-mono text-[11px] tracking-[.06em] text-muted-3 uppercase">
             {creator}
           </div>
         )}

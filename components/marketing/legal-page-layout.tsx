@@ -18,7 +18,7 @@ export function LegalPageLayout({
         subtitle={page.frontmatter.description}
       />
       {page.frontmatter.updated && (
-        <p className="mx-auto -mt-10 mb-2 w-full max-w-[720px] px-6 text-center font-mono text-[11px] tracking-[.1em] text-muted-4 uppercase md:px-16">
+        <p className="mx-auto -mt-10 mb-2 w-full max-w-[720px] px-6 text-center font-mono text-[11px] tracking-[.1em] text-muted-3 uppercase md:px-16">
           Last updated {formatDisplayDate(page.frontmatter.updated)}
         </p>
       )}

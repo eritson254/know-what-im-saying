@@ -36,7 +36,7 @@ export function ReadingPreferences() {
 
   return (
     <div className="mx-auto flex max-w-[720px] items-center justify-center gap-3 px-6 pt-9 pb-10">
-      <span className="font-mono text-[11px] tracking-[.08em] text-muted-4 uppercase">
+      <span className="font-mono text-[11px] tracking-[.08em] text-muted-3 uppercase">
         Reading preferences
       </span>
       <button

@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import { Feather } from "lucide-react";
 import { mobileNav } from "@/config/navigation";
@@ -9,9 +12,19 @@ export function MobileMenu({
   isOpen: boolean;
   onClose: () => void;
 }) {
+  useEffect(() => {
+    if (!isOpen) return;
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
   return (
     <div
       data-pagefind-ignore
+      inert={!isOpen}
       className={`fixed inset-0 z-50 flex flex-col bg-accent text-accent-foreground transition-transform duration-200 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}

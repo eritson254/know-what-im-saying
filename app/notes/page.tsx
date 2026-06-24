@@ -41,7 +41,7 @@ export default function NotesPage() {
                   index === notes.length - 1 ? "border-b border-border" : ""
                 }`}
               >
-                <div className="flex items-center gap-3 font-mono text-[11px] tracking-[.06em] text-muted-4 uppercase">
+                <div className="flex items-center gap-3 font-mono text-[11px] tracking-[.06em] text-muted-3 uppercase">
                   <span>{formatDisplayDate(note.frontmatter.date)}</span>
                   {topic && (
                     <>

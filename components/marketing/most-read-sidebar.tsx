@@ -28,7 +28,7 @@ export function MostReadSidebar({ essays }: { essays: RankedEssay[] }) {
             <span className="mb-[5px] block font-serif text-[19px] leading-[1.2] text-ink-strong">
               {essay.frontmatter.title}
             </span>
-            <span className="font-mono text-[10px] tracking-[.08em] text-muted-4 uppercase">
+            <span className="font-mono text-[10px] tracking-[.08em] text-muted-3 uppercase">
               {essay.readingTime} min read
             </span>
           </span>

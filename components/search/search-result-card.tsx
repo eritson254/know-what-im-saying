@@ -28,7 +28,7 @@ export function SearchResultCard({ result }: { result: PagefindResultData }) {
         dangerouslySetInnerHTML={{ __html: result.excerpt }}
       />
       {(meta.date || meta.readingTime) && (
-        <div className="font-mono text-[11px] tracking-[.06em] text-muted-4 uppercase">
+        <div className="font-mono text-[11px] tracking-[.06em] text-muted-3 uppercase">
           {meta.date}
           {meta.date && meta.readingTime && " · "}
           {meta.readingTime && `${meta.readingTime} min read`}

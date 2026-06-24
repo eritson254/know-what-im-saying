@@ -66,7 +66,7 @@ export function ReadingListModal({
           {title}
         </h2>
         {creator && (
-          <div className="mb-5 font-mono text-[12px] tracking-[.06em] text-muted-4 uppercase">
+          <div className="mb-5 font-mono text-[12px] tracking-[.06em] text-muted-3 uppercase">
             {creator}
           </div>
         )}

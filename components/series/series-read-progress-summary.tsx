@@ -31,7 +31,7 @@ export function SeriesReadProgressSummary({
             style={{ width: `${percent}%` }}
           />
         </div>
-        <p className="text-[12px] text-muted-4">
+        <p className="text-[12px] text-muted-3">
           Reading progress is saved on this device only.
         </p>
       </div>

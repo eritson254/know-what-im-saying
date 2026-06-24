@@ -50,7 +50,7 @@ export default function NewsletterPage() {
           </ul>
 
           <NewsletterForm location="newsletter_page" />
-          <p className="mt-4 text-[13px] leading-[1.5] text-muted-4">
+          <p className="mt-4 text-[13px] leading-[1.5] text-muted-3">
             No spam. Unsubscribe anytime.
           </p>
         </div>

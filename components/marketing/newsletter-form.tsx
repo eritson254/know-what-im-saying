@@ -23,7 +23,7 @@ export function NewsletterForm({
       <input
         type="email"
         placeholder="you@email.com"
-        className="min-w-0 flex-1 rounded-[2px] border border-border-card bg-white px-[14px] py-3 font-sans text-[15px] text-ink outline-none"
+        className="min-w-0 flex-1 rounded-[2px] border border-border-card bg-white px-[14px] py-3 font-sans text-[15px] text-ink"
       />
       <button
         type="submit"

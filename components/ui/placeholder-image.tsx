@@ -26,7 +26,7 @@ export function PlaceholderImage({
         backgroundImage: `repeating-linear-gradient(135deg, ${stripeA} 0 11px, ${stripeB} 11px 22px)`,
       }}
     >
-      <span className="font-mono text-[10px] tracking-[.1em] text-muted-4 uppercase">
+      <span className="font-mono text-[10px] tracking-[.1em] text-muted-3 uppercase">
         {label}
       </span>
     </div>

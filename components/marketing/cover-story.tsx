@@ -41,7 +41,7 @@ export function CoverStory({
         </div>
         <div>
           <PlaceholderImage label="cover image" aspectRatio="4 / 5" />
-          <div className="mt-3 text-right font-serif text-[14px] text-muted-4 italic">
+          <div className="mt-3 text-right font-serif text-[14px] text-muted-3 italic">
             A quiet, cinematic image sets the tone.
           </div>
         </div>

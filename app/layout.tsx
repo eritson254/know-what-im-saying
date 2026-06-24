@@ -53,8 +53,16 @@ export default function RootLayout({
       className={`${newsreader.variable} ${inter.variable} ${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans pb-[calc(54px+env(safe-area-inset-bottom))] md:pb-0">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-[2px] focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-foreground"
+        >
+          Skip to content
+        </a>
         <ThemeScript />
-        {children}
+        <div id="main-content" className="contents">
+          {children}
+        </div>
         <Footer />
         <MobileTabBar />
         <PopupController />
