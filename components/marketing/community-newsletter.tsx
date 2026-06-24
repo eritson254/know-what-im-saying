@@ -2,7 +2,11 @@ import Link from "next/link";
 import { MessageCircle, Mail } from "lucide-react";
 import { NewsletterForm } from "@/components/marketing/newsletter-form";
 
-export function CommunityNewsletter() {
+export function CommunityNewsletter({
+  newsletterLocation = "homepage",
+}: {
+  newsletterLocation?: string;
+}) {
   return (
     <section className="grid gap-8 px-6 pb-16 md:grid-cols-2 md:gap-8 md:px-14 md:pb-[88px]">
       <div className="flex min-w-0 flex-col rounded-[3px] bg-accent p-9 text-accent-foreground md:p-[50px]">
@@ -39,7 +43,7 @@ export function CommunityNewsletter() {
         <p className="mb-[26px] max-w-[34ch] text-[16px] leading-[1.6] text-muted-2">
           New essays, notes, and ideas worth sitting with.
         </p>
-        <NewsletterForm className="mt-auto" />
+        <NewsletterForm className="mt-auto" location={newsletterLocation} />
       </div>
     </section>
   );

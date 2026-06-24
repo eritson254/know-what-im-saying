@@ -47,7 +47,7 @@ export default function ResourcesPage() {
             email and you&rsquo;ll be the first to know when something is
             ready.
           </p>
-          <NewsletterForm className="mx-auto max-w-[440px]" />
+          <NewsletterForm className="mx-auto max-w-[440px]" location="resources" />
           <p className="mt-4 text-[13px] leading-[1.5] text-muted-4">
             No spam. Unsubscribe anytime.
           </p>

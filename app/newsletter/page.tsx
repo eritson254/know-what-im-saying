@@ -49,7 +49,7 @@ export default function NewsletterPage() {
             ))}
           </ul>
 
-          <NewsletterForm />
+          <NewsletterForm location="newsletter_page" />
           <p className="mt-4 text-[13px] leading-[1.5] text-muted-4">
             No spam. Unsubscribe anytime.
           </p>

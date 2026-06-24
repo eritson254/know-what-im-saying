@@ -9,6 +9,7 @@ import {
   type RelatedReadingItem,
 } from "@/components/articles/related-reading-band";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
+import { CheckoutButton } from "@/components/products/checkout-button";
 import {
   getAllProducts,
   getProductBySlug,
@@ -42,35 +43,6 @@ export async function generateMetadata({
     description: product.frontmatter.description,
     pathname: `/resources/${product.slug}`,
   });
-}
-
-function CheckoutButton({
-  externalCheckoutUrl,
-  className = "",
-}: {
-  externalCheckoutUrl: string | null;
-  className?: string;
-}) {
-  if (!externalCheckoutUrl) {
-    return (
-      <span
-        className={`inline-flex items-center justify-center rounded-[2px] border-[1.5px] border-border-strong px-7 py-[13px] text-[16px] font-semibold text-muted-3 ${className}`}
-      >
-        Coming Soon
-      </span>
-    );
-  }
-
-  return (
-    <a
-      href={externalCheckoutUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center rounded-[2px] bg-accent px-7 py-[13px] text-[16px] font-semibold text-accent-foreground no-underline hover:bg-accent-hover ${className}`}
-    >
-      Get it now
-    </a>
-  );
 }
 
 export default async function ProductPage({
@@ -121,6 +93,7 @@ export default async function ProductPage({
             )}
             <CheckoutButton
               externalCheckoutUrl={product.frontmatter.externalCheckoutUrl}
+              productSlug={product.slug}
             />
           </div>
         </div>
@@ -133,6 +106,7 @@ export default async function ProductPage({
       <section className="mx-auto w-full max-w-[640px] px-6 py-16 text-center md:px-16">
         <CheckoutButton
           externalCheckoutUrl={product.frontmatter.externalCheckoutUrl}
+          productSlug={product.slug}
         />
       </section>
     </main>

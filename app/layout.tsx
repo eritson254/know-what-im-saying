@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Inter, Space_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/layout/footer";
 import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
 import { ThemeScript } from "@/components/theme/theme-script";
@@ -54,6 +56,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <MobileTabBar />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

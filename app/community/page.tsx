@@ -1,6 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { SectionIntro } from "@/components/marketing/section-intro";
+import { WhatsAppJoinButton } from "@/components/marketing/whatsapp-join-button";
 import { siteConfig } from "@/config/site";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -45,14 +46,7 @@ export default function CommunityPage() {
             Quietly, a couple of times a week &mdash; no group chat, no
             pressure to reply, just the writing as it comes out.
           </p>
-          <a
-            href={siteConfig.whatsappChannelUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="self-start rounded-[2px] bg-accent-foreground px-[22px] py-3 text-[15px] font-semibold text-accent no-underline hover:bg-white"
-          >
-            Join the channel
-          </a>
+          <WhatsAppJoinButton href={siteConfig.whatsappChannelUrl} />
         </div>
       </section>
 

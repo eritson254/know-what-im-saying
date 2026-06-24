@@ -1,6 +1,22 @@
-export function NewsletterForm({ className = "" }: { className?: string }) {
+"use client";
+
+import { track } from "@vercel/analytics";
+
+export function NewsletterForm({
+  className = "",
+  location,
+}: {
+  className?: string;
+  location: string;
+}) {
   return (
-    <form className={`flex flex-col gap-[10px] sm:flex-row ${className}`}>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        track("newsletter_submit_clicked", { location });
+      }}
+      className={`flex flex-col gap-[10px] sm:flex-row ${className}`}
+    >
       <input
         type="email"
         placeholder="you@email.com"

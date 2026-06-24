@@ -94,7 +94,7 @@ export default function ShareYourStoryPage() {
         </div>
       </section>
 
-      <CommunityNewsletter />
+      <CommunityNewsletter newsletterLocation="share_your_story" />
     </main>
   );
 }
