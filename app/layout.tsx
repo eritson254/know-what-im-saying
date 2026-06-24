@@ -27,6 +27,11 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: "Know What I'm Saying?",
   description: "Thoughtful writing for people trying to make sense of modern life.",
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({

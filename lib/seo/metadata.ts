@@ -21,6 +21,9 @@ export function buildPageMetadata({
     description,
     alternates: {
       canonical: buildCanonicalUrl(pathname, canonicalUrl),
+      types: {
+        "application/rss+xml": "/feed.xml",
+      },
     },
     openGraph: {
       title,
