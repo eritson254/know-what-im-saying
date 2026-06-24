@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/layout/footer";
 import { MobileTabBar } from "@/components/layout/mobile-tab-bar";
+import { PopupController } from "@/components/popup/popup-controller";
 import { ThemeScript } from "@/components/theme/theme-script";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -56,6 +57,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <MobileTabBar />
+        <PopupController />
         <Analytics />
         <SpeedInsights />
       </body>

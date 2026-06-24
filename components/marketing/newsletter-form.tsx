@@ -5,15 +5,18 @@ import { track } from "@vercel/analytics";
 export function NewsletterForm({
   className = "",
   location,
+  onSubmit,
 }: {
   className?: string;
   location: string;
+  onSubmit?: () => void;
 }) {
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
         track("newsletter_submit_clicked", { location });
+        onSubmit?.();
       }}
       className={`flex flex-col gap-[10px] sm:flex-row ${className}`}
     >
