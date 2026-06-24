@@ -11,6 +11,7 @@ export const primaryNav: NavLink[] = [
   { label: "Start Here", href: "/start-here" },
   { label: "Community", href: "/community" },
   { label: "About", href: "/about" },
+  { label: "Resources", href: "/resources" },
 ];
 
 export const mobileNav: NavLink[] = [
@@ -22,6 +23,7 @@ export const mobileNav: NavLink[] = [
   { label: "Start Here", href: "/start-here" },
   { label: "Community", href: "/community" },
   { label: "About", href: "/about" },
+  { label: "Resources", href: "/resources" },
 ];
 
 export const footerReadLinks: NavLink[] = [
@@ -29,6 +31,7 @@ export const footerReadLinks: NavLink[] = [
   { label: "Series", href: "/series" },
   { label: "Topics", href: "/topics" },
   { label: "Reading List", href: "/reading-list" },
+  { label: "Resources", href: "/resources" },
 ];
 
 export const footerConnectLinks: NavLink[] = [
