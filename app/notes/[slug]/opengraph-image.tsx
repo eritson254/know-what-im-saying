@@ -9,6 +9,8 @@ export function generateStaticParams() {
   return getAllNotes().map((note) => ({ slug: note.slug }));
 }
 
+export const dynamicParams = false;
+
 export default async function Image({
   params,
 }: {

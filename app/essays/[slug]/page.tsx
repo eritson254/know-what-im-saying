@@ -26,6 +26,8 @@ export function generateStaticParams() {
   return getAllEssays().map((essay) => ({ slug: essay.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {

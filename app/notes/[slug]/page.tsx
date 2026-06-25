@@ -15,6 +15,8 @@ export function generateStaticParams() {
   return getAllNotes().map((note) => ({ slug: note.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
