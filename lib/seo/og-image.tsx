@@ -17,21 +17,39 @@ const COLORS = {
   placeholderB: "#f2efe4",
 };
 
-async function loadGoogleFont(family: string, weight: number, text: string) {
-  const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
-    family,
-  )}:wght@${weight}&text=${encodeURIComponent(text)}`;
-  const css = await (await fetch(url)).text();
-  const match = css.match(
-    /src: url\(([^)]+)\) format\('(opentype|truetype)'\)/,
-  );
-
-  if (match) {
-    const response = await fetch(match[1]);
-    if (response.ok) return await response.arrayBuffer();
+async function fetchWithTimeout(url: string, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
   }
+}
 
-  return null;
+async function loadGoogleFont(family: string, weight: number, text: string) {
+  try {
+    const url = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
+      family,
+    )}:wght@${weight}&text=${encodeURIComponent(text)}`;
+    const cssResponse = await fetchWithTimeout(url);
+    if (!cssResponse.ok) return null;
+    const css = await cssResponse.text();
+    const match = css.match(
+      /src: url\(([^)]+)\) format\('(opentype|truetype)'\)/,
+    );
+
+    if (match) {
+      const response = await fetchWithTimeout(match[1]);
+      if (response.ok) return await response.arrayBuffer();
+    }
+
+    return null;
+  } catch {
+    // Google Fonts unreachable or timed out during build; fall back to
+    // the ImageResponse default font rather than failing the whole build.
+    return null;
+  }
 }
 
 type OgFont = { name: string; data: ArrayBuffer; weight: 400 | 500 };
