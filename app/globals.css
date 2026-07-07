@@ -1,37 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --color-paper: #f4f1e8;
-  --color-ink: #222420;
-  --color-ink-strong: #1f211c;
+  --color-paper: #f2f2f3;
+  --color-ink: #212224;
+  --color-ink-strong: #17181a;
 
-  --color-muted-1: #54564b;
-  --color-muted-2: #696a60;
-  --color-muted-3: #696a5f;
-  --color-muted-4: #858777;
-  --color-muted-5: #4d5043;
+  --color-muted-1: #55565a;
+  --color-muted-2: #6b6c70;
+  --color-muted-3: #6b6c70;
+  --color-muted-4: #8a8b8f;
+  --color-muted-5: #52564c;
 
   --color-accent: #2c4636;
   --color-accent-hover: #1f3527;
   --color-accent-text: #2c4636;
   --color-sage: #8fa189;
 
-  --color-border: #e2decf;
-  --color-border-strong: #c7c2b0;
-  --color-border-card: #d6d1c0;
-  --color-border-soft: #ddd8c8;
+  --color-border: #e1e2e4;
+  --color-border-strong: #c9cace;
+  --color-border-card: #d8d9db;
+  --color-border-soft: #e8e9eb;
 
-  --color-pill: #dce2d0;
-  --color-pill-soft: #e3e7d8;
+  --color-pill: #dfe4dc;
+  --color-pill-soft: #e6e9e3;
 
-  --color-surface: #fbf9f2;
-  --color-band: #e8eadd;
-  --color-progress-track: #cdd4c2;
+  --color-surface: #fafafa;
+  --color-band: #e6e9e4;
+  --color-progress-track: #cfd3ce;
 
   --color-accent-foreground: #edefe3;
 
   --color-emphasis-text: #2c3a30;
-  --color-chip-neutral: #e6e3d6;
+  --color-chip-neutral: #e4e4e6;
 }
 
 @theme inline {
@@ -67,32 +67,32 @@
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --color-paper: #1c1e18;
-  --color-ink: #e8e5da;
-  --color-ink-strong: #f2efe3;
+  --color-paper: #1a1b1c;
+  --color-ink: #e6e7e8;
+  --color-ink-strong: #f1f2f2;
 
-  --color-muted-1: #c5c1ae;
-  --color-muted-2: #aba794;
-  --color-muted-3: #928f7d;
-  --color-muted-4: #75715e;
-  --color-muted-5: #bfc4ae;
+  --color-muted-1: #bcbec1;
+  --color-muted-2: #a2a4a8;
+  --color-muted-3: #8d8f93;
+  --color-muted-4: #717376;
+  --color-muted-5: #a7ac9f;
 
   --color-accent-text: #7fbf95;
 
-  --color-border: #34362c;
-  --color-border-strong: #46483c;
-  --color-border-card: #3d3f33;
-  --color-border-soft: #3a3c30;
+  --color-border: #303234;
+  --color-border-strong: #414346;
+  --color-border-card: #38393c;
+  --color-border-soft: #35373a;
 
-  --color-pill: #29331f;
-  --color-pill-soft: #232b1c;
+  --color-pill: #26312a;
+  --color-pill-soft: #202722;
 
-  --color-surface: #232520;
-  --color-band: #232a1e;
-  --color-progress-track: #3a3f30;
+  --color-surface: #1f2021;
+  --color-band: #212822;
+  --color-progress-track: #383c39;
 
   --color-emphasis-text: #cfe0d2;
-  --color-chip-neutral: #2c2d24;
+  --color-chip-neutral: #2b2c2e;
 }
 
 body {
