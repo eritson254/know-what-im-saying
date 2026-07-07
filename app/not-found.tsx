@@ -14,8 +14,8 @@ export default function NotFound() {
           This page got quiet.
         </h1>
         <p className="mb-10 max-w-[42ch] font-serif text-[19px] leading-[1.4] text-muted-2 italic md:text-[22px]">
-          Whatever you were looking for does not live at this address anymore
-          — or never did.
+          Whatever you were looking for does not live at this address anymore,
+          or never did.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button href="/">Back to the homepage</Button>

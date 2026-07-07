@@ -33,7 +33,7 @@ export default function ContactPage() {
             <Link href="/share-your-story" className="text-accent-text underline">
               Share Your Story
             </Link>{" "}
-            instead — it is read with more care than a general inbox can offer.
+            instead, it is read with more care than a general inbox can offer.
           </p>
           <p className="text-[16px] leading-[1.6] text-muted-2">
             For partnerships, press, or anything related to a future product,

@@ -23,7 +23,7 @@ export const topics: Topic[] = [
   {
     slug: "psychology-behavior",
     label: "Psychology & Behavior",
-    description: "Why we do what we do — the quiet mechanics of the human mind.",
+    description: "Why we do what we do: the quiet mechanics of the human mind.",
     icon: "Activity",
     iconColor: "#A8894F",
     iconBg: "#EEE8DA",
@@ -63,7 +63,7 @@ export const topics: Topic[] = [
   {
     slug: "friendship",
     label: "Friendship",
-    description: "The bonds that hold us — and the ones that quietly fade.",
+    description: "The bonds that hold us, and the ones that quietly fade.",
     icon: "Users",
     iconColor: "#9A8299",
     iconBg: "#ECE5EB",

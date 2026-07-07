@@ -20,7 +20,7 @@ export function CommunityNewsletter({
           Stay close to the writing
         </h3>
         <p className="mb-7 max-w-[34ch] text-[16px] leading-[1.6] text-[#c2cabb]">
-          New essays, notes, and reading recommendations — quietly, a couple
+          New essays, notes, and reading recommendations, quietly, a couple
           of times a week.
         </p>
         <Link

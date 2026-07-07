@@ -25,7 +25,8 @@ type CuratedGroup = {
 const groups: CuratedGroup[] = [
   {
     heading: "If you are new here",
-    intro: "Two pieces that show the range of what this publication tries to do.",
+    intro:
+      "Two pieces that show the range of what this publication tries to do: a story-led series, and a standalone essay about modern life.",
     items: [
       { type: "series", slug: "unrequited-love" },
       { type: "essay", slug: "we-are-not-addicted-to-our-phones" },
@@ -33,26 +34,18 @@ const groups: CuratedGroup[] = [
   },
   {
     heading: "For the person trying to make sense of love",
-    intro: "The first two installments of the series that started this whole project.",
-    items: [
-      { type: "essay", slug: "the-person-who-loved-harder" },
-      { type: "essay", slug: "the-comfort-of-almost" },
-    ],
+    intro: "The latest installment of the series that started this whole project.",
+    items: [{ type: "essay", slug: "the-comfort-of-almost" }],
   },
   {
     heading: "For the person who feels behind",
-    intro: "On the quiet pressure to always be improving.",
+    intro: "On the quiet pressure to always be improving, and what it costs.",
     items: [{ type: "essay", slug: "the-new-religion-of-self-optimization" }],
   },
   {
-    heading: "For the person rebuilding themselves",
-    intro: "On the relationships that change shape rather than end.",
+    heading: "For the person missing someone they didn't fight with",
+    intro: "A shorter note, on the friendships that change shape rather than end.",
     items: [{ type: "note", slug: "some-friendships-just-get-quiet" }],
-  },
-  {
-    heading: "For the person thinking about modern life",
-    intro: "On attention, and what it costs to never let a moment be unfilled.",
-    items: [{ type: "note", slug: "we-trained-ourselves-to-skim" }],
   },
 ];
 
@@ -111,6 +104,30 @@ export default function StartHerePage() {
         title="Start Here"
         subtitle="A few pieces that explain what this corner of the internet is about."
       />
+
+      <section className="mx-auto w-full max-w-[680px] px-6 pb-14 md:px-16">
+        <div className="space-y-6 text-[18px] leading-[1.65] text-ink md:text-[19px]">
+          <p>
+            <em className="font-serif not-italic text-ink-strong">
+              Know What I&apos;m Saying?
+            </em>{" "}
+            is a publication about being a person in a complicated modern world:
+            love, psychology, money, technology, friendship, and the feelings most
+            of us carry around without quite knowing what to call them.
+          </p>
+          <p>
+            The internet is fast now. This is meant to be slow. The writing here
+            tries to give you one of a few things: language for something you have
+            felt but could not explain, a new way to understand a familiar
+            experience, or a story that makes you feel a little less alone. No
+            advice that talks down to you, no pretending people are simpler than
+            they are.
+          </p>
+          <p className="text-muted-2">
+            If you only have a few minutes, start with one of these.
+          </p>
+        </div>
+      </section>
 
       <section className="mx-auto w-full max-w-[860px] px-6 pb-10 md:px-16">
         {groups.map((group) => {

@@ -19,7 +19,7 @@ export function ShareButton({
       try {
         await navigator.share({ title, text, url: shareUrl });
       } catch {
-        // user cancelled the share sheet — no error needed
+        // user cancelled the share sheet, no error needed
       }
       return;
     }

@@ -17,7 +17,7 @@ export function ReaderStoryCta() {
         </h2>
         <p className="mx-auto mb-8 max-w-[50ch] text-[18px] leading-[1.6] text-muted-2">
           A relationship, friendship, betrayal, loss, or moment that changed
-          the way you see yourself. Share it anonymously — it may inspire a
+          the way you see yourself. Share it anonymously. It may inspire a
           future essay.
         </p>
         <Link

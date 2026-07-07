@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 export const metadata = buildPageMetadata({
   title: "Share Your Story",
   description:
-    "Share a story anonymously — it may inspire a future essay on Know What I'm Saying?",
+    "Share a story anonymously. It may inspire a future essay on Know What I'm Saying?",
   pathname: "/share-your-story",
 });
 
