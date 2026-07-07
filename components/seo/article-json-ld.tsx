@@ -26,7 +26,7 @@ export function ArticleJsonLd({
         datePublished,
         dateModified: dateModified ?? datePublished,
         image: new URL(imagePath, siteConfig.url).toString(),
-        author: { "@type": "Person", name: "The Editor" },
+        author: { "@type": "Person", name: "Guest Author" },
         publisher: { "@type": "Organization", name: siteConfig.name },
         mainEntityOfPage: canonicalUrl,
       }}
