@@ -31,8 +31,6 @@ export const essayFrontmatterSchema = baseFrontmatterSchema.extend({
   series: seriesRefSchema.nullable().default(null),
   featured: z.boolean().default(false),
   readingTimeOverride: z.number().int().positive().nullable().default(null),
-  heroImage: z.string().nullable().default(null),
-  heroAlt: z.string().nullable().default(null),
   showNewsletterCTA: z.boolean().default(true),
   showWhatsAppCTA: z.boolean().default(true),
   showStorySubmissionCTA: z.boolean().default(false),
@@ -49,8 +47,6 @@ export const seriesFrontmatterSchema = z.object({
   slug: z.string(),
   description: z.string(),
   theme: z.string(),
-  coverImage: z.string().nullable().default(null),
-  coverAlt: z.string().nullable().default(null),
   status: z.enum(["ongoing", "complete"]),
   totalPlanned: z.number().int().positive(),
   topics: z.array(z.string()).default([]),
@@ -67,7 +63,6 @@ export const productFrontmatterSchema = z.object({
   type: z.enum(["ebook", "workbook", "guide", "plan"]),
   price: z.string().nullable().default(null),
   status: z.enum(["coming-soon", "available"]),
-  coverImage: z.string().nullable().default(null),
   externalCheckoutUrl: z.string().nullable().default(null),
 });
 

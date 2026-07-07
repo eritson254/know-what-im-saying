@@ -1,7 +1,6 @@
 import { Header } from "@/components/layout/header";
 import { SectionIntro } from "@/components/marketing/section-intro";
 import { ProductCard } from "@/components/products/product-card";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import { NewsletterForm } from "@/components/marketing/newsletter-form";
 import { getAllProducts } from "@/lib/content/products";
 import { buildPageMetadata } from "@/lib/seo/metadata";
@@ -34,11 +33,6 @@ export default function ResourcesPage() {
         </section>
       ) : (
         <section className="mx-auto w-full max-w-[560px] px-6 pb-20 text-center md:px-16">
-          <PlaceholderImage
-            label="resources coming soon"
-            aspectRatio="16 / 9"
-            className="mb-9"
-          />
           <h2 className="mb-3 font-serif text-[26px] leading-[1.15] font-medium text-ink-strong">
             The first resource is still being written.
           </h2>

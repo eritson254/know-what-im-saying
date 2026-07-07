@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { MdxContent } from "@/components/articles/mdx-content";
 import { Pill } from "@/components/ui/pill";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import {
   RelatedReadingBand,
   type RelatedReadingItem,
@@ -74,28 +73,25 @@ export default async function ProductPage({
       <Header />
 
       <section className="mx-auto w-full max-w-[1100px] px-6 pt-14 pb-16 md:px-16 md:pt-20">
-        <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
-          <PlaceholderImage label="product cover" aspectRatio="4 / 5" />
-          <div>
-            <div className="mb-4">
-              <Pill>{typeLabel[product.frontmatter.type]}</Pill>
-            </div>
-            <h1 className="mb-4 font-serif text-[40px] leading-[1.08] font-medium text-ink-strong md:text-[48px]">
-              {product.frontmatter.title}
-            </h1>
-            <p className="mb-6 max-w-[44ch] text-[17px] leading-[1.6] text-muted-2">
-              {product.frontmatter.description}
-            </p>
-            {product.frontmatter.price && (
-              <p className="mb-7 font-mono text-[16px] text-ink-strong">
-                {product.frontmatter.price}
-              </p>
-            )}
-            <CheckoutButton
-              externalCheckoutUrl={product.frontmatter.externalCheckoutUrl}
-              productSlug={product.slug}
-            />
+        <div className="max-w-[640px]">
+          <div className="mb-4">
+            <Pill>{typeLabel[product.frontmatter.type]}</Pill>
           </div>
+          <h1 className="mb-4 font-serif text-[40px] leading-[1.08] font-medium text-ink-strong md:text-[48px]">
+            {product.frontmatter.title}
+          </h1>
+          <p className="mb-6 max-w-[44ch] text-[17px] leading-[1.6] text-muted-2">
+            {product.frontmatter.description}
+          </p>
+          {product.frontmatter.price && (
+            <p className="mb-7 font-mono text-[16px] text-ink-strong">
+              {product.frontmatter.price}
+            </p>
+          )}
+          <CheckoutButton
+            externalCheckoutUrl={product.frontmatter.externalCheckoutUrl}
+            productSlug={product.slug}
+          />
         </div>
       </section>
 

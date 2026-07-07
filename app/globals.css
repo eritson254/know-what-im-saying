@@ -28,11 +28,6 @@
   --color-band: #e8eadd;
   --color-progress-track: #cdd4c2;
 
-  --color-placeholder-a: #ece8db;
-  --color-placeholder-b: #f2efe4;
-  --color-placeholder-band-a: #dbdfcb;
-  --color-placeholder-band-b: #e2e5d4;
-
   --color-accent-foreground: #edefe3;
 
   --color-emphasis-text: #2c3a30;
@@ -61,10 +56,6 @@
   --color-surface: var(--color-surface);
   --color-band: var(--color-band);
   --color-progress-track: var(--color-progress-track);
-  --color-placeholder-a: var(--color-placeholder-a);
-  --color-placeholder-b: var(--color-placeholder-b);
-  --color-placeholder-band-a: var(--color-placeholder-band-a);
-  --color-placeholder-band-b: var(--color-placeholder-band-b);
   --color-accent-foreground: var(--color-accent-foreground);
   --color-emphasis-text: var(--color-emphasis-text);
   --color-chip-neutral: var(--color-chip-neutral);
@@ -99,11 +90,6 @@
   --color-surface: #232520;
   --color-band: #232a1e;
   --color-progress-track: #3a3f30;
-
-  --color-placeholder-a: #2b2d24;
-  --color-placeholder-b: #313428;
-  --color-placeholder-band-a: #232a1e;
-  --color-placeholder-band-b: #29311f;
 
   --color-emphasis-text: #cfe0d2;
   --color-chip-neutral: #2c2d24;

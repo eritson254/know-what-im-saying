@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Pill } from "@/components/ui/pill";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 import type { SeriesFrontmatter } from "@/lib/content/schema";
 
 export function SeriesCard({
@@ -19,11 +18,6 @@ export function SeriesCard({
       href={`/series/${series.slug}`}
       className="flex flex-col no-underline hover:opacity-[.78]"
     >
-      <PlaceholderImage
-        label="series cover"
-        aspectRatio="16 / 10"
-        className="mb-[18px]"
-      />
       <div className="mb-[10px]">
         <Pill>
           {statusLabel} · {publishedCount} of {total} essays

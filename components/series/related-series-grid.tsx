@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Pill } from "@/components/ui/pill";
-import { PlaceholderImage } from "@/components/ui/placeholder-image";
 
 type RelatedSeriesItem = {
   slug: string;
@@ -23,11 +22,6 @@ export function RelatedSeriesGrid({ items }: { items: RelatedSeriesItem[] }) {
             href={`/series/${item.slug}`}
             className="flex flex-col no-underline hover:opacity-[.78]"
           >
-            <PlaceholderImage
-              label="series cover"
-              aspectRatio="16 / 10"
-              className="mb-[18px]"
-            />
             <div className="mb-[10px]">
               <Pill>{item.statusLabel}</Pill>
             </div>
